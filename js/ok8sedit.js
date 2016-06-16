@@ -121,6 +121,10 @@ function readyok1() {
                     if (k_obj.attr("id").indexOf("a") != 0) {
                         return
                     }
+                    
+                    if (k_obj.attr("id").indexOf("as") != -1) {
+                        return
+                    }
                     p_obj = k_obj;
                     showedit("a")
                 }
@@ -186,12 +190,34 @@ function addMusic(){
 
 }
 
-function insetAds(){
+function insetAds(obj){
+	var title = $(obj).attr('title').trim();
+	var photo_url = $(obj).attr('photo_url').trim();
+	var link_url = $(obj).attr('link_url').trim();
+	select_id = $("#bigger").val();
+    select_id++;
+	var html = '<a href="'+link_url+'" class="pa20"><img id="a' + select_id + '" src="'+photo_url+'"></a><a href="'+link_url+'"><p id="a' + select_id + '" style="text-align:center;color:#4ad6c4;margin-top:-13px">'+title+'</p></a>'
+	p_obj.after(html);
+	$('.adss').hide()
+	if ($(".c7").length > 0) {
+        $(".c7").removeClass("c7 pa5")
+    }
+    $("#ok8sedit").remove();
+    $("#ok8sinput").remove()
+    updateHtml()
+}
+// 插入广告
+function showMore() {
 	alreayGet = true
+	getHistoryDatas()
 }
 
 
 var getHistoryDatas = function() {
+	$('.adss').show();
+	$("#ok8sedit").remove();
+    $("#ok8sinput").remove();
+    showmodal(0)
 	if(alreayGet == false){
 		return
 	}
@@ -235,7 +261,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div id="as'+i+'" class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div onclick="insetAds(this)" id="as'+i+'" class="edit hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'插入' +
 					'</div>' +
 
@@ -255,7 +281,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div id="as'+i+'" class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div id="as'+i+'" class="edit hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'插入' +
 					'</div>' +
 
@@ -284,10 +310,6 @@ var getHistoryDatas = function() {
 		}
 	});
 	
-	$("#ok8sedit").remove();
-    $("#ok8sinput").remove();
-    showmodal(0)
-	$('.adss').show()
 	alreayGet = false
 			
 	// addDnymicEvent()
@@ -589,7 +611,7 @@ function subques() {
     }
 }
 
-	function getQueryString(name) { 
+function getQueryString(name) { 
 	var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); 
 	var r = window.location.search.substr(1).match(reg); 
 	if (r != null) return unescape(r[2]); return null; 
@@ -854,7 +876,10 @@ function musicTag(){
 
 function goBack(){
 	// alert("dfd")
-	history.go(-1)
+	// history.go(-1)
+	editcancel();
+	$('.adss').hide()
+	
 }
 
 function test(){

@@ -107,7 +107,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div class="edit hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'编辑' +
 					'</div>' +
 
@@ -127,7 +127,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div class="edit hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'编辑' +
 					'</div>' +
 

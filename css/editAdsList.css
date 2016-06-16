@@ -78,6 +78,8 @@
 }
 
 .edit{
+	position: absolute;
+	bottom: 12px;
 	/*margin-left: 165px;
 	margin-top: 11px;*/
 	margin-left: 245px;

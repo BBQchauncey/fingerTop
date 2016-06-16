@@ -49,10 +49,18 @@ body{
 
 .loginDesc{
 	position: absolute;
-	top:24px;
+	top:15px;
 	left: 65px;
-	font-size: 16px;
+	font-size: 14px;
 	color: #a9a9a9;
+}
+
+.loginDescSub{
+	position: absolute;
+	top:34px;
+	left: 65px;
+	font-size: 12px;
+	color: #dfdfdf;
 }
 
 .loginBtn{
