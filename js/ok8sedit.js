@@ -235,7 +235,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div id="as'+i+'" class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'插入' +
 					'</div>' +
 
@@ -243,7 +243,7 @@ var getHistoryDatas = function() {
 					datas[i].statusTxt +
 					'</div>' +
 
-					'<div class="delHisAdsCtx" adsId="' + datas[i].ad_id + '"><div class="delHisAds" >' +
+					'<div id="as'+(i+1)+'" onclick="delAds(this)" class="delHisAdsCtx" adsId="' + datas[i].ad_id + '"><div class="delHisAds" >' +
 					'×' +
 					'</div></div>' +
 					'</div>'
@@ -255,7 +255,7 @@ var getHistoryDatas = function() {
 					
 					'<p style="color:#fcaf2a;font-size:15px;padding-left: 12px;">广告点击量200</p>'+
 
-					'<div class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
+					'<div id="as'+i+'" class="edit vertivalStyle hisBtnStyle" adsId="' + datas[i].ad_id + '" title="' + datas[i].title + '" photo_url="' + datas[i].photo_url + '" link_url="' + datas[i].link_url + '">' +
 					'插入' +
 					'</div>' +
 
@@ -263,7 +263,7 @@ var getHistoryDatas = function() {
 					datas[i].statusTxt +
 					'</div>' +
 
-					'<div class="delHisAdsCtx" adsId="' + datas[i].ad_id + '"><div class="delHisAds" >' +
+					'<div id="as'+(i+1)+'"  class="delHisAdsCtx" adsId="' + datas[i].ad_id + '"><div class="delHisAds" >' +
 					'×' +
 					'</div></div>' +
 					'</div>'
@@ -277,46 +277,25 @@ var getHistoryDatas = function() {
 
 			}
 			
-			$("#ok8sedit").remove();
-    			$("#ok8sinput").remove();
-    			showmodal(0)
-				$('.adss').show()
-				alreayGet = false
-			
-			addDnymicEvent()
 
 		},
 		error: function(res) {
 			console.log(res)
 		}
 	});
+	
+	$("#ok8sedit").remove();
+    $("#ok8sinput").remove();
+    showmodal(0)
+	$('.adss').show()
+	alreayGet = false
+			
+	// addDnymicEvent()
 }
 
-
-var addDnymicEvent = function() {
-	// 历史广告编辑按钮事件
-	$('.edit').off('click')
+var delAds = function(t){
 		// 删除历史广告按钮事件
-	$('.delHisAdsCtx').off('click')
-
-	// 历史广告编辑按钮事件
-	$('.edit').on('click', function() {
-			$('.historyTab').hide();
-			$('.creatTab').show()
-			$('.clickFlag').removeClass('headerActive')
-			$('.headLeft').addClass('headerActive')
-			var adsId = $(this).attr('adsid');
-			$('#modifyAdsId').val(adsId);
-			$('.imgCxt').attr("src",$(this).attr('photo_url'));
-			$("#adsDesc").val($(this).attr('title'));
-			$("#adsLink").val($(this).attr('link_url'));
-			$('.imgCxt').show();
-			$('.addFile').hide();
-			$('.delImgCtx').show();
-		})
-		// 删除历史广告按钮事件
-	$('.delHisAdsCtx').on('click', function() {
-		var ele = $(this);
+		var ele = $(t);
 		var id = ele.attr('adsId');
 		swal({
 			title: "确定删除吗?",
@@ -348,7 +327,31 @@ var addDnymicEvent = function() {
 
 		});
 
-	})
+}
+
+
+var addDnymicEvent = function() {
+	// 历史广告编辑按钮事件
+	$('.edit').off('click')
+		// 删除历史广告按钮事件
+	$('.delHisAdsCtx').off('click')
+
+	// 历史广告编辑按钮事件
+	$('.edit').on('click', function() {
+			$('.historyTab').hide();
+			$('.creatTab').show()
+			$('.clickFlag').removeClass('headerActive')
+			$('.headLeft').addClass('headerActive')
+			var adsId = $(this).attr('adsid');
+			$('#modifyAdsId').val(adsId);
+			$('.imgCxt').attr("src",$(this).attr('photo_url'));
+			$("#adsDesc").val($(this).attr('title'));
+			$("#adsLink").val($(this).attr('link_url'));
+			$('.imgCxt').show();
+			$('.addFile').hide();
+			$('.delImgCtx').show();
+		})
+	
 }
 
 function addTxt(){
