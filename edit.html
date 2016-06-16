@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>编辑文章</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/edit.css" />
+		<link rel="stylesheet" type="text/css" href="css/alert.css" />
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/ok8sedit.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/alert.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/edit.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="headLeft vertivalStyle clickFlag headerActive">编辑修改</div>
+			<div class="headRight vertivalStyle clickFlag">历史发布</div>
+		</div>
+
+		<div class="editTab">
+			<div class="adsLink">
+				<textarea id="adsLink" name="adsLink" placeholder="点击输入区，键盘出现后，长按粘贴即可，请勿编辑转发谣言、暴力、色情等违规内容"></textarea>
+				<div class="adsLinkBtn clear" onclick="clearVal('adsLink')">×</div>
+				<div class="addAdsLink" onclick="goEdit()">去编辑</div>
+			</div>
+
+			<div class="fenge"></div>
+
+			<div class="findWenZ">
+				<div class="titleCxt">
+					<span class="xianStyle vertivalStyle"><img src="images/left.png"/></span><span class="title vertivalStyle">资讯可编辑平台名录</span><span class="xianStyle vertivalStyle"><img src="images/right.png"/></span>
+					<p class="subTitle">在以下平台内容，均可编辑，下载APP操作更方便</p>
+				</div>
+
+				<div class="wenZSource">
+					<div class="weixin wenZStyle">
+						<div class="weixinImg">
+							<img src="images/weixin2.jpg" />
+						</div>
+						<p>微信</p>
+					</div>
+
+					<div class="toutiao wenZStyle middelApp">
+						<div class="toutiaoImg">
+							<img src="images/toutiao.jpg" />
+						</div>
+						<p>今日头条</p>
+					</div>
+
+					<div class="tencent wenZStyle">
+						<div class="tencentImg">
+							<img src="images/qq.jpg" />
+						</div>
+						<p>腾讯新闻</p>
+
+					</div>
+				</div>
+
+				<div class="wenZSource">
+					<div class="fenghuang wenZStyle">
+						<div class="fenghuangImg">
+							<img src="images/fenghuang.jpg" />
+						</div>
+						<p>凤凰网</p>
+
+					</div>
+
+					<div class="youku wenZStyle middelApp">
+						<div class="youkuImg">
+							<img src="images/youku.png" />
+						</div>
+						<p>优酷</p>
+					</div>
+
+					<div class="tudou wenZStyle">
+						<div class="tudouImg">
+							<img src="images/tudou.png" />
+						</div>
+						<p>土豆</p>
+
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<div class="historyPublishTab">
+			<div class="saixuan">
+				<ul>
+					<li class="liClick activeClick">转发</li>
+					<li class="liClick">浏览</li>
+					<li class="liClick">点击</li>
+					<li class="liClick">文章</li>
+					<li class="liClick">视频</li>
+				</ul>
+			</div>
+			<!--<div class="publishItem">
+				<div class="itemTop">
+					<div class="adsTitleImg vertivalStyle">
+						<img src="images/toutiao.jpg" />
+					</div>
+
+					<div class="adsTitle vertivalStyle">
+						管公司的股份数阿萨德法师打发
+					</div>
+				</div>
+
+				<div class="itemMiddle">
+					<div class="adsDescImg vertivalStyle topStyle">
+						<img src="images/vipBg.png" />
+					</div>
+
+					<div class="adsDescTitle vertivalStyle topStyle">
+						<p>事故发生的分公司分公司发电公司发电公司分</p>
+						<p class="adsClickNum">广告点击量2</p>
+
+					</div>
+				</div>
+
+				<div class="newLine"></div>
+
+				<div class="time">
+					<span>5-6</span>&nbsp;<span>09:07</span><br>
+					<span>转发300</span>&nbsp;<span>浏览300</span>
+				</div>
+
+				<div class="btns">
+					<div class="editBtn btnStyle">
+						编辑
+					</div>
+
+					<div class="shareBtn btnStyle">
+						分享
+					</div>
+				</div>
+
+				<div class="delImgCtx">
+					<div class="delBtn">
+						×
+					</div>
+				</div>
+			</div>-->
+			
+			<p class="showMore" onclick="getHistoryParam()">加载更多...</p>
+		</div>
+
+	</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>注册</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/register.css" />
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="loginCtx">
+			<div class="headImg">
+				<img src="images/registerHeadImg.png" />
+			</div>
+
+			<div class="telCtx inputCtxStyle">
+				<span class="telTxt textStyle">手机号</span>
+				<span class="vertivalLine"></span>
+				<input type="tel" name="tel" id="tel" value="" placeholder="请输入您的手机号" oninput="forceNum(this)" />
+			</div>
+
+			<div class="passportCtx inputCtxStyle">
+				<span class="passportTxt textStyle">验证码</span>
+				<span class="vertivalLine"></span>
+				<input type="tel" name="passport" id="passport" value="" maxlength="10" oninput="forceNum(this)" />
+				<span class="getPassport">获取验证码</span>
+			</div>
+
+			<div class="loginBtn inputCtxStyle">
+				注册
+			</div>
+			
+			<div class="gzHao">
+				关注公众号
+			</div>
+
+			<!--<a href="changePhone.html">
+				<p class="loginTip">手机号码更换无法登录？</p>
+			</a>-->
+		</div>
+
+		<script type="text/javascript">
+			var m = 0;
+
+			function forceNum(obj) {
+				$(obj).val($(obj).val().replace(/[^\d]/g, ''))
+			}
+			$(function() {
+				$('.getPassport').on('click', function() {
+					minute()
+				})
+			})
+			var minute = function() {
+				m += 1;
+				var rand = 60 - m;
+				var valid_num_btn = $('.getPassport').html();
+				if (rand === 0) {
+					$('.getPassport').html('获取验证码');
+					m = 0;
+					$('.getPassport').on('click', function() {
+						minute()
+					})
+				} else {
+					$('.getPassport').off()
+					$('.getPassport').html('重试' + rand + '秒');
+					setTimeout('minute()', 1000);
+				}
+			}
+		</script>
+	</body>
+
+</html>

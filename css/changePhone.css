@@ -1,0 +1,62 @@
+@import url("base.css");
+
+input{
+	background-color: transparent;
+	/*border: 1px solid red;*/
+	margin-left: 10px;
+	height: 47px;
+	color: #c7c7c7;
+}
+
+.inputCtxStyle{
+	width: 326px;
+	height: 47px;
+	line-height: 47px;
+	background-color: #f9f9f9;
+	border-radius: 110px;
+	margin: 15px auto 0;
+	/*color: white;*/
+	font-size: 14px;
+}
+
+.textStyle{
+	margin-left: 21px;
+	color: #9a9a9a;
+}
+
+.vertivalLine{
+	height: 21px;
+	margin-left: 11px;
+	border-right: 1px solid #c2c2c2;
+}
+
+::-webkit-input-placeholder{
+	font-size: 14px;
+	color: #c7c7c7;
+}
+
+.olderTelCtx{
+	margin-top: 20px;
+}
+
+.submit{
+	height: 48px;
+	line-height: 48px;
+	color: white;
+	font-size: 16px;
+	text-align: center;
+	margin: 39px auto 0;
+	background-color: #50CCC4;
+}
+
+.tip{
+	font-size: 14px;
+	text-align: center;
+	color: #50CCC4;
+	margin-top: 47px;
+}
+
+a{
+	color: #50CCC4;
+	text-decoration: none;
+}

@@ -1,0 +1,44 @@
+.tanchuang{
+	position: fixed;
+	top: 0;
+	width: 375px;
+	height: 100%;
+	z-index: 9999;
+	background-color: rgba(0,0,0,0.7);
+	display: none;
+}
+
+
+.winTop{
+	width: 270px;
+	height: 162px;
+	line-height: 162px;
+	font-size: 25px;
+	color:white;
+	text-align: center;
+	margin: 164px auto 0;
+	background: url(../images/tanImg.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+	background-color: #50cdc4;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
+}
+
+.winBottom{
+	width: 270px;
+	height: 82px;
+	margin: 0 auto;
+	padding-top: 38px;
+	background-color: white;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	color: #139085;
+	text-align: center;
+}
+
+.closeWin{
+	width: 35px;
+	height: 35px;
+	margin: 16px auto 0;
+}

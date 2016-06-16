@@ -1,0 +1,162 @@
+@import url("base.css");
+.vipHead{
+	height: 210px;
+	color: white;
+	font-size: 15px;
+	background: url(../images/vipBg.png) no-repeat;
+	background-size: 100%;
+	background-position: center center;
+	/*border: 1px solid red;*/
+}
+
+
+.vipHead ul{
+	list-style: pointer;
+	padding-left: 48px;
+	padding-top: 120px;
+}
+
+.vipChoose{
+	height: 71px;
+	line-height: 71px;
+	font-size: 22px;
+	text-align: center;
+}
+
+.firstMonth{
+	position: relative;
+	height: 56px;
+	/*line-height: 56px;*/
+	border-bottom: 1px solid #d4d4d4;
+}
+
+.firstMonthMoney{
+	position: absolute;
+	color: #f6393a;
+	font-size: 22px;
+	top: 15px;
+	left: 71px;
+}
+
+.firstMonthIntro{
+	position: absolute;
+	color: #9f9f9f;
+	font-size: 13px;
+	top: 22px;
+	left: 167px;
+}
+
+
+.payRadio{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 17px;
+	right: 25px;
+	border-radius: 50%;
+	border: 1px solid #cccccc;
+}
+
+
+.payOneYear{
+	position: relative;
+	height: 67px;
+	/*border: 1px solid red;*/
+}
+
+.payOneYearRadio{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 20px;
+	right: 25px;
+	border-radius: 50%;
+	border: 1px solid #cccccc;
+}
+
+
+.hotImg{
+	position: absolute;
+	top: 20px;
+	left: 26px;
+	width: 25px;
+	
+}
+
+.payOneYearDetail{
+	position: absolute;
+	top: 9px;
+	left: 73px;
+}
+
+.payOneYearMoney{
+	color: #f6393a;
+	font-size: 22px;
+}
+
+.payOneYearIntro{
+	color: #9f9f9f;
+	font-size: 13px;
+	margin-left: 8px;
+	text-decoration: line-through;
+}
+
+.discount{
+	font-size: 13px;
+	margin-left: 4px;
+}
+
+.payChoose{
+	background: url(../images/duigou.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+	background-color: #53ccc4;
+	border: 1px solid #53ccc4;
+}
+
+.weiXinPayType{
+	position: relative;
+	height: 58px;
+}
+
+.weixinImg{
+	position: absolute;
+	top: 20px;
+	left: 26px;
+	width: 28px;
+}
+
+.weixinTxt{
+	position: absolute;
+	top: 20px;
+	left: 75px;
+	font-size: 16px;
+}
+
+
+.weinxinChoose{
+	position: absolute;
+	width: 25px;
+	height: 25px;
+	top: 20px;
+	right: 25px;
+	border-radius: 50%;
+	background: url(../images/duigou.png) no-repeat;
+	background-size: 60%;
+	background-position: center center;
+	background-color: #53ccc4;
+}
+
+
+.subminBtn{
+	width: 300px;
+	height: 53px;
+	margin: 27px auto 0;
+	line-height: 53px;
+	font-size: 22px;
+	color: white;
+	text-align: center;
+	border-radius: 110px;
+	background-color: #53ccc4;
+	
+}

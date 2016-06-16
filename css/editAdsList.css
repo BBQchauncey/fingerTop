@@ -1,0 +1,116 @@
+.hisAds{
+	position: relative;
+	width: 345px;
+	margin: 15px auto 0;
+	background-color: white;
+	padding-bottom: 10px;
+	/*border: 1px solid red;*/
+}
+
+.adsImg{
+	height: 129px;
+	overflow: hidden;
+}
+
+.adsStatus{
+	position: absolute;
+	top: 0;
+	left: 0;
+	padding: 4px 12px;
+	font-size: 15px;
+	color: white;
+	/*background-color: #ffa005;*/
+}
+
+.adss{
+	position: fixed;
+	top: 0;
+	width: 375px;
+	height: 100%;
+	background-color: #f6f6f9;
+	overflow: scroll;
+	display: none;
+	padding-bottom: 60px;
+}
+
+.delHisAds{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 20px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+	color: white;
+	background-color: #3b3b3b;
+	cursor: pointer;
+}
+
+.delHisAdsCtx{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 40px;
+	height: 40px;
+}
+
+
+.adsTitle{
+	width: 90%;
+	margin: 0 auto;
+	padding-bottom: 10px;
+	padding-left: 12px;
+	padding-top: 9px;
+	font-size: 16px !important;
+	color: #607fa4;
+	border-bottom:1px solid #eff1f3 ;
+}
+
+
+.hisBtnStyle{
+	width: 77px;
+	height: 37px;
+	line-height: 37px;
+	color: white;
+	font-size: 18px;
+	text-align: center;
+	border-radius: 110px;
+}
+
+.edit{
+	/*margin-left: 165px;
+	margin-top: 11px;*/
+	margin-left: 245px;
+	margin-top: 11px;
+	background-color: #00cbcf;
+}
+
+
+.delBtn{
+	margin-left: 10px;
+	margin-top: 11px;
+	background-color: #00cbcf;
+}
+
+.showMore{
+	font-size: 16px;
+	margin-top: 15px;
+	text-align: center;
+	cursor:pointer;
+	color: #00cacf;
+}
+
+.green{
+	background-color:#00cacf ;
+}
+
+.orange{
+	background-color: #ffa005;
+}
+
+.time{
+	padding-left: 12px;
+	padding-top: 12px;
+	color: #d7d7d7;
+	font-size: 15px;
+}

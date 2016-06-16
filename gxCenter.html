@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>贡献中心</title>
+		<link rel="stylesheet" type="text/css" href="css/gxCenter.css" />
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no" />
+	</head>
+
+	<body>
+		<div class="headImg">
+			<img src="images/gx1.jpg" />
+			<p class="headTxt1 headTxtStyle">当前贡献值</p>
+			<p class="headTxt2 headTxtStyle">570</p>
+			<!--<p class="headTxt3 headTxtStyle">提现即将开放</p>-->
+			<p class="headTxt4 headTxtStyle">贡献值越多现金or礼品奖励越多!</p>
+		</div>
+
+		<div class="yqglTitle">
+			<div class="rect vertivalStyle"></div>
+			<p class="yqtitle vertivalStyle">邀请攻略</p>
+			<div class="myEWMImg vertivalStyle">
+				<img src="images/gx2.png" />
+			</div>
+			<p class="myEWMTxt vertivalStyle">我的二维码</p>
+		</div>
+
+		<div class="yqglCtx">
+			<ul class="yqCtx">
+				<li>好友扫描我的二维码</li>
+				<li>关注指尖传播</li>
+				<li>进入首页并注册，即可获得贡献值</li>
+				<!--没有邀请时隐藏-->
+				<li style="display: none;">我邀请A注册,我+60贡献值,A邀请B注册,我+30贡献值</li>
+			</ul>
+		</div>
+
+		<div class="fenge">
+
+		</div>
+		
+		<!--当没有邀请时隐藏yaoQDetail-->
+		<div class="yaoQDetail" style="display: none;">
+			<div class="myYQ">
+				<div class="rect vertivalStyle"></div>
+				<p class="myYQtitle vertivalStyle">我邀请的人</p>
+			</div>
+
+			<div class="myYQCtx">
+				<div class="myYQItem">
+					<div class="mainYQ YQItemStyle">
+						<div class="YQImg vertivalStyle">
+							<img src="images/headImg.png" />
+						</div>
+
+						<div class="YQName vertivalStyle">
+							小包又白
+						</div>
+
+						<div class="YQTime vertivalStyle">
+							59分前
+						</div>
+
+						<div class="addScoreStyle mainSoreColor">
+							+60
+						</div>
+					</div>
+
+					<div class="subYQ YQItemStyle">
+
+						<div class="YQSubImg vertivalStyle">
+							<img src="images/gx3.png" />
+						</div>
+
+						<div class="YQImg vertivalStyle">
+							<img src="images/headImg.png" />
+						</div>
+
+						<div class="YQName vertivalStyle">
+							小包又白
+						</div>
+
+						<div class="YQTime vertivalStyle">
+							59分前
+						</div>
+
+						<div class="addScoreStyle subSoreColor">
+							+30
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--有邀请时隐藏-->
+		<div class="yaoQNone">
+			<div class="yaoQImg">
+				<img src="images/gxCenterNone.png"/>
+			</div>
+			
+			<p class="yaoQNoneDesc">我邀A注册,我+60贡献值,A邀B注册,我+30贡献值</p>
+		</div>
+	</body>
+
+</html>

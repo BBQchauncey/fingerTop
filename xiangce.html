@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>指尖相册</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no" />
+		<link rel="stylesheet" type="text/css" href="css/xiangce.css"/>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="headImg">
+			<div class="cameraImg">
+				记录
+			</div>
+			
+			<p>用文字、照片、视频记录精彩生活</p>
+			
+			<div class="userImg">
+				<img src="images/1464277861.png"/>
+			</div>
+			
+			<div class="saixuan saixuanDown">
+				<span class="activeTxt">时间</span>
+				<div class="saixuanCtx">
+					<p class="saixuanCtxItem">时间</p>
+					<p class="saixuanCtxItem">点击率</p>
+					<p class="saixuanCtxItem">曝光率</p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="xiangceCtx">
+			<!--图片-->
+			<div class="xiangceiItem">
+				<div class="time vertivalStyle">
+					<p>昨天</p>
+					<p>4:21</p>
+				</div>
+				
+				<div class="xiangceiItemDetail vertivalStyle">
+					<div class="imgAndVideoStyle">
+						<img src="images/9.jpg"/>
+						<div class="mask"></div>
+						<div class="adsDesc">
+							<div class="adsDescImg">
+								<img src="images/9.jpg"/>
+							</div>
+							
+							<span class="userDesc">这里是用户输入的20字广告描述</span>
+						</div>
+					</div>
+					
+					<p>这里是文章标题，如无标题，则用文章前一段，不超过20字做标题</p>
+					
+				</div>
+				
+
+			</div>
+			
+			<!--视频-->
+			<div class="xiangceiItem">
+				<div class="time vertivalStyle">
+					<p>30</p>
+					<p>5月</p>
+				</div>
+				
+				<div class="xiangceiItemDetail vertivalStyle">
+					<div class="imgAndVideoStyle">
+						<img src="images/9.jpg"/>
+						<div class="mask"></div>
+						
+						<div class="adsDesc">
+							<div class="adsDescImg">
+								<img src="images/9.jpg"/>
+							</div>
+							
+							<span class="userDesc">这里是用户输入的20字广告描述</span>
+						</div>
+						
+						<div class="videoTagImg">
+							<img src="images/videoTag.png"/>
+						</div>
+					</div>
+					
+					<p>该文章为插入视频文章，文章内图文视频优先显示视频</p>
+				</div>
+				
+			</div>
+			
+			<!--文字-->
+			<div class="xiangceiItem">
+				<div class="time vertivalStyle">
+					<p>30</p>
+					<p>6月</p>
+				</div>
+				
+				<div class="xiangceiItemDetail vertivalStyle">
+					<p>这里是文章标题，如无标题，则用文章前一段，不超过20字做标题</p>
+					<div class="adsDesc txtCameraCtx">
+							<div class="adsDescImg">
+								<img src="images/9.jpg"/>
+							</div>
+							
+							<span class="userDesc txtCamera">这里是用户输入的20字广告描述</span>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+		
+		<script>
+			$(function(){
+				addEvent()
+			})
+			
+			function addEvent(){
+				$('.saixuan').click(function(){
+					// var classAttr = $(this).attr('class');
+					// 最近的在最上面
+					// if(classAttr.indexOf('saixuanUp')==-1){
+						// $(this).addClass('saixuanUp')
+					// 最近的在最下面
+					// }else{
+						// $(this).removeClass('saixuanUp')
+					// }
+					$('.saixuanCtx').show()
+				})
+				
+				$('.saixuanCtxItem').click(function(e){
+					e.stopPropagation()
+					$('.activeTxt').html($(this).html())
+					$('.saixuanCtx').hide()
+				})
+			}
+		</script>
+		
+		<!--<div class="tanchuang">
+			
+		</div>-->
+	</body>
+
+</html>

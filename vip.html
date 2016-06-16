@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>指尖传播</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/vip.css" />
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="vipHead">
+			<ul>
+				<li>创建及管理自己的产品广告</li>
+				<li>编辑热点/搞笑/资讯，植入广告，形成软文</li>
+				<li>轻松管理上下级代理</li>
+			</ul>
+		</div>
+
+		<div class="vipChoose">
+			套餐选择
+		</div>
+
+		<div class="fenge"></div>
+
+		<form id="PayVip" action="" method="get">
+			<div class="firstMonth">
+				<p class="firstMonthMoney vertivalStyle">￥60/月</p>
+				<p class="firstMonthIntro vertivalStyle">仅限首月</p>
+				<label for="payTypeOne" class="radioClass payRadio vertivalStyle"></label>
+				<input type="radio" name="payType" id="payTypeOne" value="60" hidden="hidden" />
+			</div>
+
+			<div class="payOneYear">
+				<div class="hotImg">
+					<img src="images/vipHot.png" />
+				</div>
+
+				<div class="payOneYearDetail">
+					<span class="payOneYearMoney">￥380/月</span><span class="payOneYearIntro">原价￥720</span>
+					<p class="discount">促销：买一年送一年</p>
+				</div>
+
+				<label for="payTypeTwo" class="radioClass payOneYearRadio vertivalStyle payChoose"></label>
+				<input type="radio" name="payType" id="payTypeTwo" value="380" hidden="hidden" checked="checked" />
+			</div>
+			
+			<div class="fenge"></div>
+			
+			<div class="weiXinPayType">
+				<div class="weixinImg">
+					<img src="images/weixin.png" />
+				</div>
+				
+				<p class="weixinTxt">微信支付</p>
+				
+				<p class="weinxinChoose"></p>
+			</div>
+			
+			<div class="fenge"></div>
+			
+			<div class="subminBtn">
+				确认支付
+			</div>
+		</form>
+
+		<script>
+			$(function() {
+				$('.radioClass').click(function() {
+					$('.radioClass').removeClass('payChoose')
+					$(this).addClass('payChoose')
+				})
+			})
+		</script>
+	</body>
+
+</html>

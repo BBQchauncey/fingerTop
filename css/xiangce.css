@@ -1,0 +1,216 @@
+@import url("base.css");
+@import url("tanchuang.css");
+
+body{
+	background-color: #F6F6F9;
+}
+
+.headImg{
+	position: relative;
+	height: 152.9px;
+	background: url(../images/xiangceHeadImg.png) no-repeat;
+	background-size: 100%;
+	background-position: top center;
+	padding-top: 52px;
+	/*border: 1px solid red;*/
+	margin-bottom: 51px;
+}
+
+.headImg p{
+	color: white;
+	text-align: center;
+	padding-top: 16px;
+	font-size: 15px;
+}
+
+.cameraImg{
+	width: 62px;
+	height: 44px;
+	line-height: 44px;
+	margin: 0 auto;
+	background:url(../images/xiangce.png) no-repeat;
+	background-size: 25%;
+	background-position: 20px center; 
+	border-radius: 110px;
+	background-color: #49dbbf;
+	font-size: 16px;
+	color: white;
+	padding-left: 60px;
+}
+
+.userImg{
+	position: absolute;
+	width: 78px;
+	height: 78px;
+	left: 50%;
+	margin-left: -39px;
+	bottom: -39px;
+	text-align: center;
+	line-height: 78px;
+	border-radius: 50%;
+	border: 2px solid white;
+	background-color: white;
+	overflow: hidden;
+}
+
+.saixuanDown{
+	position: absolute;
+	bottom: -37px;
+	right: 14px;
+	width:68px ;
+	height: 27px;
+	line-height: 27px;
+	/*padding-top: 5px;
+	padding-bottom: 5px;*/
+	border: 1px solid #1eaec6;
+	color: #1eaec6;
+	font-size: 14px;
+	padding-left: 10px;
+	/*text-align: center;*/
+	border-radius: 110px;
+	background:url(../images/sanjiao.png) no-repeat;
+	background-position:52px center; 
+	background-size: 20%;
+	z-index: 4;
+}
+
+.saixuanUp{
+	background:url(../images/sanjiao2.png) no-repeat;
+	background-position:52px center; 
+	background-size: 20%;
+}
+
+.saixuanCtx{
+	/*position: absolute;*/
+	width:63px ;
+	margin-left:-4px;
+	min-height: 80px;
+	border: 1px solid #1eaec6;
+	display: none;
+	background-color: #F6F6F9;
+}
+
+.xiangceiItem{
+	margin-top: 10px;
+}
+
+.saixuanCtx p{
+	padding: 0;
+	color: #1eaec6;
+}
+
+.xiangceCtx{
+	width: 335px;
+	margin: 0 auto;
+	padding-bottom: 30px;
+}
+
+.xiangceiItemDetail p{
+	width: 245px;
+	margin: 13px auto 0;
+	font-size: 15px;
+}
+
+.time{
+	width: 40px;
+	color: #7d7d7d;
+	text-align: center;
+	
+}
+
+.time p:nth-child(1){
+	font-size: 16px;
+}
+
+.time p:nth-child(1){
+	font-size: 15px;
+}
+
+.xiangceiItemDetail{
+	position: relative;
+	width: 278px;
+	/*height: 204px;*/
+	min-height: 98px;
+	margin-left: 10px;
+	padding-bottom: 20px;
+	background-color: white;
+}
+
+.vertivalStyle{
+	vertical-align: top;
+}
+
+.imgAndVideoStyle{
+	position: relative;
+	width:278px ;
+	height: 140px;
+	overflow: hidden;
+	/*border: 1px solid red;*/
+}
+
+.mask{
+	position: absolute;
+	top: 0;
+	background-color: rgba(0,0,0,0.5);
+	width:278px ;
+	height: 140px;
+	z-index: 2;
+}
+
+.videoTagImg{
+	position: absolute;
+	top: 43px;
+	width: 54px;
+	left: 50%;
+	margin-left: -27px;
+	height: 54px;
+	z-index: 3;
+}
+
+.adsDesc{
+	position: absolute;
+	left: 7px;
+	bottom: 8px;
+	width:278px ;
+	height: 28px;
+	line-height: 28px;
+	z-index: 5;
+	/*border: 1px solid red;*/
+}
+
+.txtCameraCtx{
+	bottom: 28px;
+	
+}
+
+.adsDescImg{
+	width: 50px;
+	height: 28px;
+	display: inline-block;
+	vertical-align: middle;
+	overflow: hidden;
+}
+
+.userDesc{
+	width: 215px;
+	/*border: 1px solid red;*/
+	display: inline-block;
+	vertical-align: middle;
+	color: white;
+	line-height: normal;
+	font-size: 13px;
+}
+
+.txtCamera{
+	
+}
+
+.txtCamera{
+	color: #607fa4;
+}
+
+/*.userImg img{
+	width: 100%;
+}*/
+
+

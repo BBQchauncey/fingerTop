@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>更换手机号</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/changePhone.css" />
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<img src="images/remark.jpg" />
+		</div>
+
+		<div class="olderTelCtx inputCtxStyle">
+			<span class="telTxt textStyle">原手机号</span>
+			<span class="vertivalLine"></span>
+			<input type="tel" name="oldertel" id="oldertel" value="" placeholder="请输入原手机号" oninput="forceNum(this)" />
+		</div>
+
+		<div class="mibaoCtx inputCtxStyle">
+			<span class="mibaoTxt textStyle">密保问题</span>
+			<span class="vertivalLine"></span>
+			<input type="tel" name="mibao" id="mibao" value="" readonly="readonly" placeholder="选择密保问题" oninput="forceNum(this)" />
+		</div>
+
+		<div class="mibaodaanCtx inputCtxStyle">
+			<span class="mibaodaanTxt textStyle">密保答案</span>
+			<span class="vertivalLine"></span>
+			<input type="tel" name="mibaodaan" id="mibaodaan" value="" placeholder="输入设置的问题" oninput="forceNum(this)" />
+		</div>
+
+		<div class="newPhoneCtx inputCtxStyle">
+			<span class="newPhoneTxt textStyle">新手机号</span>
+			<span class="vertivalLine"></span>
+			<input type="tel" name="newPhone" id="newPhone" value="" placeholder="输入新手机号" oninput="forceNum(this)" />
+		</div>
+
+		<div class="submit inputCtxStyle">
+			更换手机号
+		</div>
+		<a href="tel:123445555">
+			<p class="tip">未设置密保？拨打客服</p>
+		</a>
+	</body>
+
+	<script type="text/javascript">
+		function forceNum(obj) {
+			$(obj).val($(obj).val().replace(/[^\d]/g, ''))
+		}
+	</script>
+
+</html>

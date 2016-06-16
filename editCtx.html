@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>文章编辑</title>
+		<meta name="viewport" content="width=375, maximum-scale=10,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<link rel="stylesheet" type="text/css" href="css/jquery.minicolors.css"/>
+		<link rel="stylesheet" type="text/css" href="css/editCtx.css" />
+		<link rel="stylesheet" type="text/css" href="css/astyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/icostyle.css"/>
+		<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+		<!--<script src="js/zepto.min.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/sys8.js" type="text/javascript" charset="utf-8"></script>
+		<!--<script src="js/ok8.js" type="text/javascript" charset="utf-8"></script>-->
+		<script src="js/ok8sedit.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/jquery.minicolors.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/alert.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div id="xxpage">
+			<div id="mymodal"></div>
+			<div class="musicDiv">
+				
+			</div>
+			<div id="main">
+				<!--<div class="cb n5"></div>-->
+				<!--把后台处理的页面放入main_ok8s_body里面，请把viewport 去掉-->
+				<div id="main_ok8s_body" style="display:block;">
+					
+					<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+					<meta http-equiv="X-UA-Compatible" content="IE=edge">
+					<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+					<meta name="apple-mobile-web-app-capable" content="yes">
+					<meta name="apple-mobile-web-app-status-bar-style" content="black">
+					<meta name="format-detection" content="telephone=no">
+
+					<script type="text/javascript">
+						window.logs = {
+							pagetime: {}
+						};
+						window.logs.pagetime['html_begin'] = (+new Date());
+					</script>
+
+					<script type="text/javascript">
+						var page_begintime = (+new Date());
+						var biz = "MjM5Nzg0MTQ3OQ==" || "";
+						var sn = "737fa2a6464a6aa6f49b0e9b8dbd0da9" || "" || "";
+						var mid = "2660540977" || "" || "";
+						var idx = "8" || "" || "";
+						var is_rumor = "" * 1;
+						var norumor = "" * 1;
+						if (!!is_rumor && !norumor) {
+							if (!document.referrer || document.referrer.indexOf("mp.weixin.qq.com/mp/rumor") == -1) {
+								location.href = "http://mp.weixin.qq.com/mp/rumor?action=info&__biz=" + biz + "&mid=" + mid + "&idx=" + idx + "&sn=" + sn + "#wechat_redirect";
+							}
+						}
+					</script>
+					<script type="text/javascript">
+						var MutationObserver = window.WebKitMutationObserver || window.MutationObserver || window.MozMutationObserver;
+						var isDangerSrc = function(src) {
+							if (src) {
+								var host = src.match(/http(?:s)?:\/\/([^\/]+?)(\/|$)/);
+								if (host && !/qq\.com$/.test(host[1]) && !/weishi\.com$/.test(host[1])) {
+									return true;
+								}
+							}
+							return false;
+						}
+						var ishttp = location.href.indexOf("http://") == 0;
+						if (ishttp && typeof MutationObserver === 'function' && location.host == 'mp.weixin.qq.com') {
+							window.__observer_data = {
+								count: 0,
+								exec_time: 0,
+								list: []
+							};
+							window.__observer = new MutationObserver(function(mutations) {
+								window.__observer_data.count++;
+								var begin = new Date(),
+									deleteNodes = [];
+								mutations.forEach(function(mutation) {
+									var nodes = mutation.addedNodes;
+									for (var i = 0; i < nodes.length; i++) {
+										var node = nodes[i];
+										if (node.tagName === 'SCRIPT') {
+											var scriptSrc = node.src;
+											if (isDangerSrc(scriptSrc)) {
+												window.__observer_data.list.push(scriptSrc);
+												deleteNodes.push(node);
+											}
+										}
+									}
+								});
+								for (var i = 0; i < deleteNodes.length; i++) {
+									var node = deleteNodes[i];
+									node.parentNode.removeChild(node);
+								}
+								window.__observer_data.exec_time += (new Date() - begin);
+							});
+							window.__observer.observe(document, {
+								subtree: true,
+								childList: true
+							});
+						}
+						(function() {
+							if (Math.random() < 0.01 && ishttp && HTMLScriptElement.prototype.__lookupSetter__ && typeof Object.defineProperty !== "undefined") {
+								window.__danger_src = {
+									xmlhttprequest: [],
+									script_src: [],
+									script_setAttribute: []
+								};
+								var t = "$" + Math.random();
+								HTMLScriptElement.prototype.__old_method_script_src = HTMLScriptElement.prototype.__lookupSetter__('src');
+								HTMLScriptElement.prototype.__defineSetter__('src', function(url) {
+									if (url && isDangerSrc(url)) {
+										window.__danger_src.script_src.push(url);
+									}
+									this.__old_method_script_src(url);
+								});
+								var element_setAttribute_method = "element_setAttribute" + t;
+								Object.defineProperty(Element.prototype, element_setAttribute_method, {
+									value: Element.prototype.setAttribute,
+									enumerable: false
+								});
+								Element.prototype.setAttribute = function(name, url) {
+									if (this.tagName == 'SCRIPT' && name == 'src' && isDangerSrc(url)) {
+										window.__danger_src.script_setAttribute.push(url);
+									}
+									this[element_setAttribute_method](name, url);
+								};
+							}
+						})();
+					</script>
+
+					<link rel="dns-prefetch" href="//res.wx.qq.com">
+					<link rel="dns-prefetch" href="//mmbiz.qpic.cn">
+					<link rel="shortcut icon" type="image/x-icon" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/favicon22c41b.ico">
+					<script type="text/javascript">
+						String.prototype.html = function(encode) {
+							var replace = ["&#39;", "'", "&quot;", '"', "&nbsp;", " ", "&gt;", ">", "&lt;", "<", "&amp;", "&", "&yen;", "¥"];
+							if (encode) {
+								replace.reverse();
+							}
+							for (var i = 0, str = this; i < replace.length; i += 2) {
+								str = str.replace(new RegExp(replace[i], 'g'), replace[i + 1]);
+							}
+							return str;
+						};
+						window.isInWeixinApp = function() {
+							return /MicroMessenger/.test(navigator.userAgent);
+						};
+						window.getQueryFromURL = function(url) {
+							url = url || 'http://qq.com/s?a=b#rd';
+							var query = url.split('?')[1].split('#')[0].split('&'),
+								params = {};
+							for (var i = 0; i < query.length; i++) {
+								var arg = query[i].split('=');
+								params[arg[0]] = arg[1];
+							}
+							if (params['pass_ticket']) {
+								params['pass_ticket'] = encodeURIComponent(params['pass_ticket'].html(false).html(false).replace(/\s/g, "+"));
+							}
+							return params;
+						};
+						(function() {
+							var params = getQueryFromURL(location.href);
+							window.uin = params['uin'] || '';
+							window.key = params['key'] || '';
+							window.wxtoken = params['wxtoken'] || '';
+							window.pass_ticket = params['pass_ticket'] || '';
+						})();
+					</script>-->
+
+					<title>改变他人其实没那么难</title>
+
+					<!--<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve2d1390.css">-->
+					<style>
+
+					</style>
+					<!--[if lt IE 9]>
+<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_pc2c9cd6.css">
+<![endif]-->
+					<!--<script type="text/javascript">
+						document.domain = "qq.com";
+					</script>
+
+					<script type="text/javascript">
+						var write_sceen_time = (+new Date());
+					</script>-->
+
+					<div id="a0" class="discuss_container editing access" style="display: none;">
+						<div id="a1" class="discuss_container_inner">
+							<h2 class="rich_media_title">改变他人其实没那么难</h2>
+							<span id="a109"></span>
+							<div id="a2" class="frm_textarea_box_wrp">
+								<span id="a110" class="frm_textarea_box">
+                    <textarea id="js_cmt_input" class="frm_textarea" placeholder="留言将由公众号筛选后显示，对所有人可见。"></textarea>
+                    <div id="a3" class="emotion_tool">
+                        <span id="a111" class="emotion_switch"></span>
+								<span id="a112" class="pic_emotion_switch_wrp">
+                            <img id="a176" class="pic_default" src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/emotion/icon_emotion_switch.2x278965.png" alt="">
+                            <img id="a177" class="pic_active" src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/emotion/icon_emotion_switch_active.2x278965.png" alt="">
+                        </span>
+								<div id="a4" class="emotion_panel">
+									<span id="a113" class="emotion_panel_arrow_wrp">
+                                <i class="emotion_panel_arrow arrow_out"></i>
+                                <i class="emotion_panel_arrow arrow_in"></i>
+                            </span>
+									<div id="a5" class="emotion_list_wrp">
+
+									</div>
+									<ul class="emotion_navs" id="js_navbar">
+
+									</ul>
+								</div>
+							</div>
+							</span>
+						</div>
+						<div id="a6" class="discuss_btn_wrp"><a id="a203" class="btn btn_primary btn_discuss btn_disabled" href="javascript:;">提交</a></div>
+						<div id="a7" class="discuss_list_wrp">
+							<div id="a8" class="rich_tips with_line title_tips discuss_title_line">
+								<span id="a114" class="tips">我的留言</span>
+							</div>
+							<ul class="discuss_list" id="js_cmt_mylist"></ul>
+						</div>
+						<div id="a9" class="rich_tips tips_global loading_tips">
+							<img id="a178" src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/common/icon_loading_white2805ea.gif" class="rich_icon icon_loading_white" alt="">
+							<span id="a115" class="tips">加载中</span>
+						</div>
+						<div id="a10" class="wx_poptips">
+							<img id="a179" alt="" class="icon_toast" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGoAAABqCAYAAABUIcSXAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA3NpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNS1jMDE0IDc5LjE1MTQ4MSwgMjAxMy8wMy8xMy0xMjowOToxNSAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bWxuczp4bXA9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC8iIHhtcE1NOk9yaWdpbmFsRG9jdW1lbnRJRD0ieG1wLmRpZDoyMTUxMzkxZS1jYWVhLTRmZTMtYTY2NS0xNTRkNDJiOGQyMWIiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTA3QzM2RTg3N0UwMTFFNEIzQURGMTQzNzQzMDAxQTUiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTA3QzM2RTc3N0UwMTFFNEIzQURGMTQzNzQzMDAxQTUiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIChNYWNpbnRvc2gpIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6NWMyOGVjZTMtNzllZS00ODlhLWIxZTYtYzNmM2RjNzg2YjI2IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjIxNTEzOTFlLWNhZWEtNGZlMy1hNjY1LTE1NGQ0MmI4ZDIxYiIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Pmvxj1gAAAVrSURBVHja7J15rF1TFMbXk74q1ZKHGlMkJVIhIgg1FH+YEpEQJCKmGBpThRoSs5jVVNrSQUvEEENIhGiiNf9BiERICCFIRbUiDa2qvudbOetF3Tzv7XWGffa55/uS7593977n3vO7e5+199p7v56BgQGh0tcmvAUERREUQVEERREUQVEERREUQVEERREUQVEERREUQVEERREUQVEERVAUQVEERVAUQbVYk+HdvZVG8b5F0xj4RvhouB+eCy8KrdzDJc1RtAX8ILxvx98V1GyCSkN98Cx4z/95/Wn4fj6j6tUEeN4wkFSnw1MJqj5NhBfAuwaUHREUg4lqNMmePVsHll/HFhVfe1t3FwpJI8DXCCquDrCWNN4B6Tb4M3Z98aTPmTvh0YHl18PXw29yZiKejoPvcUD6E74yFBJbVDk6Bb7K8aP/Hb4c/tRzEYIqprPhSxzlf4Uvhb/0Xoig8qnHAJ3lqPMzfDH8XZ4LEpRf2sVdA5/sqPO9Qfop70UJyn+/boaPddT5yrq7VUUvTIVJI7q74MMddXR8NB1eXcYvhBpZm0s2w72/o86HFoKvLau/pYaXzjLMdUJ6y0LwtWV9CIIaXtvA8+G9HHV03u5q+K+yH47U0NoRngPv7KjzHDwTLj0bS1BDazfJJlcnOOostC6ysnCT+q80G/sIvFVgeW09D8FPVT0uoP7VfvAD8NjA8pqmuAN+OcYAjso0RbIZ8DGB5TVNcRO8JMaHY9SXSdfa3eeANJimWBLrA7JFiZwIXye+NMUV8CcxP2SRFjXefok7NRjSGZJlWUPvw2/wtNiQirSoXWyMsR28wR7AzzYM0oXw+Y7yK+CLJGeaoqjyrJSdZJD6Ov4+z5y6NJc0Az7NUecHydIUy+v60KNyQHoM3nKI1y7YCFiq0i7uBvgER52vDdKqWn9djhY1Dn4G3n6Ecqm2rF74dvgoR53S0hQxW9RJAZAGW5bSn58QJA27dQ7uIEedjywEX5NKVxCqsY6y+qA+LxFI4+yZ6oH0trWkNan80jygtIUsc5SflgAsDXgehfdx1KkkTRE76tN+Xue2jnTU0Ru1oIbvpt30bBtKhOp5yaaRkts0lic8V1i6dPcIRx2d/l8Y8XtNNEg7OOo8bl1kmmOKnDsO88CaYzejau0hWZqiL7C83oCH4SeTHvwV2BqqsHRVztSEYOmWF80NeXZT6Hd4KflResE9vCnBOlCyGfDNAstHTVPUDWoQ1t3iW+9WNizvlhfd4aerXd+ThqiMfNR6+9LvOOro5OY5JX2H4+F7HZD+kGzlamMgldWiirQsjcwWFbjmqZJteekJLK9pisvgL6RhKvuciZiwzrWWGapfrPy30kBVcSBIrw0aD3PU0XB6cehntq7rTMf7/2iQlktDVdXJLXlg6VjmiYBn6rWSTRCH6hvJ0hQrpcGq8oidsmHpTP8t8DGO9/vcWt9qabiqPgup1yKyQwvC2tSefZ73SSpNkUJ4PlLorlHZ+446nc8f3fIyywlJhwrTuwVSjBa1ccvSxN0hjjoK5xVrYZMd9V6XbFfgBukixTwGLg8sDam3dZR/wZ6L/dJlin1en8LS+bgpFbz3Ygvzu1J1HKxYNqxGpCmaCEo12rrBorD6LRp8UbpcdR5VWhTW35KlKd6QFqjuM2XzwlpnMxTvSkuUwuG/Xlg6NtPjbT6WFimF/VG6LEvXgn8QGDjMbBukVECFwhpoS+CQatfX2Q1q6H7wENHdrfCr0lKleEB9JyxNneus+VJpsVL9TwI6W65LovWIGl3KtVJaLv7LBwYTFEERFEVQFEERFEVQFEERFEVQFEERFEVQFEERFEVQFEERFFWq/hFgADUMN4RzT6/OAAAAAElFTkSuQmCC">
+							<p id="a29" class="toast_content">已留言</p>
+						</div>
+					</div>
+				</div>
+
+				<div id="a11" class="rich_media">
+
+					<div id="a12" class="top_banner">
+
+					</div>
+
+					<div id="a13" class="rich_media_inner">
+						<div id="a14">
+							<div id="a15" class="rich_media_area_primary">
+								<h2 class="rich_media_title" id="activity-name">
+                        改变他人其实没那么难 
+                    </h2>
+								<div id="a16" class="rich_media_meta_list">
+									<em id="a191" class="rich_media_meta rich_media_meta_text">2016-05-11</em>
+
+									<a id="a204" class="rich_media_meta rich_media_meta_link rich_media_meta_nickname" href="javascript:void(0);">有书</a>
+									<span id="a116" class="rich_media_meta rich_media_meta_text rich_media_meta_nickname">有书</span>
+
+									<div id="a17" class="profile_container">
+										<div id="a18" class="profile_inner">
+											<strong id="a208" class="profile_nickname">有书</strong>
+											<img id="a180" class="profile_avatar" src="" alt="">
+
+											<p id="a30" class="profile_meta">
+												<label class="profile_meta_label">微信号</label>
+												<span id="a117" class="profile_meta_value">youshucc</span>
+											</p>
+
+											<p id="a31" class="profile_meta">
+												<label class="profile_meta_label">功能介绍</label>
+												<span id="a118" class="profile_meta_value">Reading，Better&nbsp;Everyday.</span>
+											</p>
+
+										</div>
+										<span id="a119" class="profile_arrow_wrp">
+                                <i class="profile_arrow arrow_out"></i>
+                                <i class="profile_arrow arrow_in"></i>
+                            </span>
+									</div>
+								</div>
+
+								<div id="a19" class="rich_media_content ">
+
+									<p id="a32"><img id="a181" data-type="gif" data-ratio="0.6672661870503597" data-w="" width="556px" src="http://www.zhijian88.com.cn/static/img/2016/05/31/1535853172730540310.gif"><span id="a120"></span></p>
+									<p id="a33">
+										<mpvoice frameborder="0" class="res_iframe js_editor_audio audio_iframe" src="/cgi-bin/readtemplate?t=tmpl/audio_tmpl&amp;name=%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E5%85%B6%E5%AE%9E%E6%B2%A1%E9%82%A3%E4%B9%88%E9%9A%BE&amp;play_length=09:52" name="%E6%94%B9%E5%8F%98%E4%BB%96%E4%BA%BA%E5%85%B6%E5%AE%9E%E6%B2%A1%E9%82%A3%E4%B9%88%E9%9A%BE"
+											play_length="592000" voice_encode_fileid="MjM5Nzg0MTQ3OV8yNjYwNTQwOTc2"></mpvoice>
+									</p>
+									<p id="a34"><span id="a121">点上方绿标听主播婧雯朗读音频</span><br></p>
+									<p id="a35"><span id="a122">背景音乐：《西村由纪江-乐盒／在洒落阳光的树下》</span></p>
+									<p id="a36"><strong id="a209"><span id="a123"><img id="a182" data-ratio="0.45454545454545453" data-w="22" data-type="gif" width="auto" src="http://www.zhijian88.com.cn/static/img/2016/05/31/1535853172731589241.gif"></span></strong><span id="a124"></span></p>
+									<p
+										id="a37"><span id="a125">文｜</span><span id="a126">沥曼</span></p>
+										<p id="a38"><span id="a127"><br></span></p>
+										<p id="a39"><span id="a128"></span></p>
+										<p id="a40">各位书友晚上好，今天我们将继续共读戴尔·卡耐基的《人性的弱点》这本书。本书共有六个章节，一篇后序，一篇译后记，由于第三章和第四章篇幅较长，所以我们分别利用一天的早、晚读来完成，其余建议大家早、晚各读一章。建议今天晚读读完第四章6至9小节，第220页——第241页。</p>
+										<p id="a41"><br></p>
+										<p id="a42">今天的晚读，我们继续阅读第四章余下的内容。</p>
+										<p id="a43">&nbsp;<img id="a183" data-s="300,640" data-type="jpeg" src="http://www.zhijian88.com.cn/static/img/2016/05/31/1535853172733686715.jpeg" data-ratio="0.5215827338129496" data-w=""><br></p>
+										<p id="a44"><span id="a129"><strong id="a210"><span id="a130"><br></span></strong>
+											</span>
+										</p>
+										<p id="a45"><span id="a131"><strong id="a211"><span id="a132">如何改变他人，成为领导者</span></strong>
+											</span>
+										</p>
+										<p id="a46"><br></p>
+										<p id="a47"><span id="a133"><em id="a192"><span id="a134">01&nbsp;夸奖他人每一点微小的进步，“由衷地赞许，不吝啬赞美之词”</span></em>
+											</span>
+										</p>
+										<p id="a48"><br></p>
+										<p id="a49">当我们训练小狗，甚至其它动物的时候，往往是以食物引诱，只要他们有一点点的进步，我们便会用它们期待的方式去奖励它们。这并非是什么新发现，而是打从出现驯服动物开始，便有的规则。</p>
+										<p id="a50"><br></p>
+										<p id="a51">那么人呢，如何才能激励人们走向成功？</p>
+										<p id="a52"><br></p>
+										<p id="a53">当我们想改变他人，如果用奖励代替惩罚、用称赞代替责骂，哪怕他人只取得了一点点微不足道的进步，我们也由衷地赞美，不吝惜任何赞美之词，那么结果，是否比一味的“恨铁不成钢”要好得多？答案是肯定的。</p>
+										<p id="a54"><br></p>
+										<p id="a55">狄更斯因为发表文章而找到自信，成为一代文豪。卡鲁索因为母亲的信任与鼓励最终打破魔咒，成为歌唱家。回想我们自己的人生经历，是否也有过安慰暖心的话语，陪伴并且鼓励我们度过每一个寒风凛凛的孤独夜晚。</p>
+										<p id="a56"><br></p>
+										<p id="a57">每个人的身体里都隐藏着巨大的潜能，毫不夸张得说，终其一生我们都无法全部开发，你的潜能无穷无尽！而赞许就是浇灌它们的养料。<strong id="a212">每个人都需要得到他人的关注，每一个孤独的灵魂都渴望一盏明灯守候，而那些真挚的、饱含深情的、信任无比的夸赞，就是让人们坚持追寻下去的微光。</strong></p>
+										<p id="a58"><br></p>
+										<p id="a59">心理学家杰斯·莱尔在他的著作《宝贝，我一无所有，我拥有的全部就是我自己》一书中评论，“赞许的话如同抚慰人心的温煦日光，灵魂缺少它的滋养就无法像花朵般盛放。然而大多数人对于同胞只有寒风般凛冽的责难，从不愿给予些许阳光般和暖的夸奖。”<strong id="a213">如果你也渴望夸奖，请先给别人夸奖，再小的事情都好，只要是进步就好。</strong></p>
+										<p id="a60"><br></p>
+										<p id="a61"><em id="a193"><span id="a135">02&nbsp;用美誉激励他人，他就会努力不辜负你的期望</span></em></p>
+										<p id="a62"><br></p>
+										<p id="a63">如果曾经的优秀员工开始玩忽职守，你会怎么做？</p>
+										<p id="a64"><br></p>
+										<p id="a65">亨利·汉克是一家卡车经销店的服务部经理，修车工比尔最近有些消极怠工，汉克便将他叫到办公室，他首先肯定了比尔的能力并且对比尔的工作水平赞赏有加，接着，便对他说出了自己对他的失望。比尔听闻，立即保证一定会恢复之前工作状态，并且提高自己的专业能力。结果呢？不出所料，比尔为了不辜负汉克所说，从此工作兢兢业业，凡事力求完美。</p>
+										<p id="a66"><br></p>
+										<p id="a67">这个例子不由得让我想起了电影《非诚勿扰》中的一段，相亲女不停地向秦奋推销墓地，大家还记得她当时是用什么方法吗？没错，她将秦奋捧上了大孝子的宝座，不给母亲买墓地就等同于不孝，虽然这是一种歪理邪说，但最终秦奋还是妥协了。</p>
+										<p id="a68"><br></p>
+										<p id="a69">如果你想要人完成一项看起来几乎不可能的任务，或是让他在短时间内取得巨大进步，那么，请你记住这个方法，用美誉激励他人，就算他的身上没有这个闪光点，你也坚信他有，并且告诉他，他在这方面有多大的潜力。</p>
+										<p id="a70"><br></p>
+										<p id="a71"><strong id="a214">人们往往不能回绝赞美，所以你的信任，会成为他加倍努力的助燃剂，直到他真的达到你的期望为止。</strong></p>
+										<p id="a72"><br></p>
+										<p id="a73"><span id="a136"><em id="a194"><span id="a137">03&nbsp;鼓励对方勇于改变</span></em>
+											</span>
+										</p>
+										<p id="a74"><br></p>
+										<p id="a75">如果你对孩子、爱人或是员工，说他在某件事上笨手笨脚、没有天赋、毫无可取之处，无疑，你会毁了他进步的动力；如果你采用相反的方式，充分鼓励他，指出这件事对他来说易如反掌，告诉他你充分相信他的能力，或者说他一定有潜能做成这件事，那么就算他知道自己可能没有那些能力，他也无法拒绝你赞美的诱惑，一定会竭尽全力。</p>
+										<p id="a76"><br></p>
+										<p id="a77">埃利·克勃森年轻时什么也做不好，四处碰壁，尝尽了失败的滋味，却因为妻子的一句鼓励，而走上职业桥牌的道路，并且获得成功。留过两级、被认为是“脑损伤”的大卫因为对数学的兴趣开始学习，竟成长为蝉联学校光荣榜的优秀学生。</p>
+										<p id="a78"><br></p>
+										<p id="a79">不知大家有没有看过《垫底辣妹》，讲的是小学四年级水平的高中女生沙耶加，从高二开始努力学习，最终考入日本顶级学府庆应大学的故事，里面的一句台词简直燃遍天朝学子——“这世上最大的谎言就是你不行”。很多时候，我们不敢去改变，也不敢鼓励他人改变。对不了解的事物抱有恐惧，这是人之常情。但只要勇敢的跨出第一步，就会知道，这其实并没有我们所想的那么可怕，也许我们将自己的恐惧在无形中放大了几百倍，如果不亲自去尝试，那战胜自我的喜悦之情我们将永远不会知道。</p>
+										<p id="a80"><br></p>
+										<p id="a81">如果你想帮助他人进步，那么请你一定要告诉他，他本身有多么优秀，这些挑战的经历是多么的妙趣横生。卡耐基不止一次提到，他并不是期望人们掌握书中的所有人际交往技巧，而是希望我们培养一种新的生活习惯、一种新的生活态度。</p>
+										<p id="a82"><br></p>
+										<p id="a83">一旦形成，对我们每个人来说，都将终生受益。</p>
+										<p id="a84"><br></p>
+										<p id="a85"><img id="a184" data-s="300,640" data-type="jpeg" src="http://www.zhijian88.com.cn/static/img/2016/05/31/1535853172764095860.jpeg" data-ratio="0.5539568345323741" data-w=""><br></p>
+										<p id="a86"><br></p>
+										<p id="a87"><span id="a138"><em id="a195">04 让对方乐于为你做事</em></span></p>
+										<p id="a88"><br></p>
+										<p id="a89">戴尔·费里尔要儿子杰夫去捡掉落在地上的梨子，可杰夫很讨厌捡梨子的工作，总是敷衍了事。面对儿子的消极态度，戴尔没有对儿子吹胡子瞪眼睛，而是和他做了一个交易“一筐梨子换一美元，如果没捡干净，发现一个梨子就要倒扣一美元。”结果呢，地上干干净净，杰夫差点把树上的梨子都摇下来。</p>
+										<p id="a90"><br></p>
+										<p id="a91">如果你想要他人为你做什么，一定要让对方心甘情愿地为你做。首先，你要明确自己需要别人做什么，然后，让对方也在这件事中受益。将两个利益团体紧紧的绑在一起，就算是为了自己，对方也会努力去做的，不是吗？</p>
+										<p id="a92">&nbsp;</p>
+										<p id="a93">这些道理并不是只说给我们听一听，只有真的去做，才能变成我们自己的。</p>
+										<p id="a94"><br></p>
+										<p id="a95"><strong id="a215">领导是一种能力，改变别人更是一种能力。拥有如此智慧的你，请永远坚定地让自己站在人生舞台的正中央，享受万丈荣光。</strong></p>
+										<p id="a96"><br></p>
+										<p id="a97">今天的晚读到这里就结束了。大家记得签到。我们明天早读再见。</p>
+										<p id="a98"><br></p>
+										<section>
+											<section class="Powered-by-XIUMI V5">
+												<section class="">
+													<section class="">
+														<section>
+															<section class="Powered-by-XIUMI V5">
+																<section class="">
+																	<section class="Powered-by-XIUMI V5">
+																		<section class="">
+																			<section class="">
+																				<section class="tn-Powered-by-XIUMI">
+																					<p id="a99"><span id="a139">作者：沥曼，自由撰稿人。人生信念：有所不为，有所必为。</span><br></p>
+																					<p id="a100"><span id="a140">主播：婧雯,讲故事的人儿。微信公众号:如是念(rushinianyue)。暮鼓晨钟，只为温暖你。喜马拉雅电台【听一个故事】，微博:_婧雯</span></p>
+																				</section>
+																			</section>
+																		</section>
+																	</section>
+																</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+										<p id="a101"><br></p>
+										<section>
+											<section class="Powered-by-XIUMI V5">
+												<section class="">
+													<section class="">
+														<section></section>
+														<section>
+															<section>
+																<section class="">
+																	<p id="a102">注</p>
+																</section>
+																<section class="">
+																	<section class="Powered-by-XIUMI V5">
+																		<section class="">
+																			<section class="">
+																				<section><br></section>
+																				<p id="a103"><strong id="a216"><em id="a196"><strong id="a217"><em id="a197">1、如果你关注了有书，由于各种原因还没有报名有书共读行动计划，请</em></strong>点击公众号菜单栏：“<span id="a141">立即报名<span id="a142"><strong id="a218"><em id="a198">”</em></strong></span></span>，立即报名参加有书共读，与众多优秀的书友一起组队对抗惰性！</em>
+																					</strong>
+																				</p>
+																				<p id="a104"><strong id="a219"><em id="a199"><strong id="a220"><em id="a200"><span id="a143">2、公众号回复：“<span id="a144">阅读</span>”，可获得《如何阅读一本书》拆书精华包合集。</span></em></strong></em>
+																					</strong>
+																				</p>
+																				<p id="a105"><strong id="a221"><em id="a201"><strong id="a222"><em id="a202"><span id="a145">3、关注有书，回复：“<span id="a146">有书共读</span>”了解有书共读行动计划详情。</span></em></strong></em>
+																					</strong>
+																				</p>
+																			</section>
+																		</section>
+																	</section>
+																</section>
+															</section>
+														</section>
+													</section>
+												</section>
+											</section>
+										</section>
+										<p id="a106"><br></p>
+										<p id="a107"><strong id="a223"><strong id="a224"><span id="a147"><strong id="a225"><strong id="a226"><span id="a148"><strong id="a227"><strong id="a228"><span id="a149"><strong id="a229"><strong id="a230"><span id="a150"><strong id="a231"><strong id="a232"><span id="a151"><strong id="a233"><strong id="a234"><span id="a152"><strong id="a235"><strong id="a236"><span id="a153"><strong id="a237"><strong id="a238"><span id="a154"><strong id="a239"><strong id="a240"><span id="a155"><strong id="a241"><strong id="a242"><span id="a156"><img id="a185" data-type="gif" src="http://www.zhijian88.com.cn/static/img/2016/05/31/1535853172749415491.gif" data-ratio="0.32014388489208634" data-w=""></span></strong></strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+											</span>
+											</strong>
+											</strong>
+										</p>
+										<div id="description_owner">
+											<hr>
+											<p style="color: darkslateblue">此文章来源于网络, 如有侵权请联系本平台删除.</p>
+										</div>
+								</div>
+								<!--<script type="text/javascript">
+									var first_sceen__time = (+new Date());
+									if ("" == 1 && document.getElementById('js_content'))
+										document.getElementById('js_content').addEventListener("selectstart", function(e) {
+											e.preventDefault();
+										});
+									(function() {
+										if (navigator.userAgent.indexOf("WindowsWechat") != -1) {
+											var link = document.createElement('link');
+											var head = document.getElementsByTagName('head')[0];
+											link.rel = 'stylesheet';
+											link.type = 'text/css';
+											link.href = "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_winwx2c9cd6.css";
+											head.appendChild(link);
+										}
+									})();
+								</script>
+								<link rel="stylesheet" type="text/css" href="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_combo2d1390.css">-->
+
+							</div>
+
+							<div id="a22" class="rich_media_area_primary sougou">
+
+							</div>
+
+							<div id="a23" class="rich_media_area_extra">
+
+								<div id="a24" class="mpda_bottom_container">
+
+								</div>
+
+								<div id="a25"></div>
+
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<!--<script>
+					var __DEBUGINFO = {
+						debug_js: "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/debug/console2ca724.js",
+						safe_js: "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/moonsafe2e21ab.js",
+						res_list: []
+					};
+				</script>
+				<script>
+					window.moon_map = {
+						"appmsg/emotion/caret.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/caret278965.js",
+						"biz_wap/jsapi/cardticket.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/cardticket275627.js",
+						"appmsg/emotion/map.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/map278965.js",
+						"appmsg/emotion/textarea.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/textarea27cdc5.js",
+						"appmsg/emotion/nav.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/nav278965.js",
+						"appmsg/emotion/common.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/common278965.js",
+						"appmsg/emotion/slide.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/slide2a9cd9.js",
+						"pages/report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/report2c9cd6.js",
+						"pages/music_player.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/music_player2b674b.js",
+						"pages/loadscript.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/loadscript2c9cd6.js",
+						"appmsg/emotion/dom.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/dom278965.js",
+						"biz_wap/utils/hashrouter.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/hashrouter2805ea.js",
+						"a/gotoappdetail.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/gotoappdetail2a2c13.js",
+						"a/ios.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/ios275627.js",
+						"a/android.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/android2c5484.js",
+						"a/profile.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/profile29b1f8.js",
+						"a/mpshop.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/mpshop2da3e2.js",
+						"a/card.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/a/card2d1390.js",
+						"biz_wap/utils/position.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/position29b1f8.js",
+						"appmsg/a_report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/a_report2e1b33.js",
+						"biz_common/utils/respTypes.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/respTypes2c57d0.js",
+						"appmsg/cmt_tpl.html.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cmt_tpl.html2a2c13.js",
+						"sougou/a_tpl.html.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/a_tpl.html2c6e7c.js",
+						"appmsg/emotion/emotion.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/emotion/emotion2a9cd9.js",
+						"biz_common/utils/report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/report275627.js",
+						"biz_common/utils/huatuo.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/huatuo293afc.js",
+						"biz_common/utils/cookie.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/cookie275627.js",
+						"pages/voice_component.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/voice_component2c5484.js",
+						"new_video/ctl.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/new_video/ctl2d441f.js",
+						"biz_common/utils/monitor.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/monitor2a30ee.js",
+						"biz_common/utils/spin.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/spin275627.js",
+						"biz_wap/jsapi/pay.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/pay275627.js",
+						"appmsg/reward_entry.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/reward_entry2db716.js",
+						"appmsg/comment.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/comment2d39f3.js",
+						"appmsg/like.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/like2b5583.js",
+						"appmsg/a.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/a2da3e2.js",
+						"pages/version4video.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/pages/version4video2c7543.js",
+						"rt/appmsg/getappmsgext.rt.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/rt/appmsg/getappmsgext.rt2c21f6.js",
+						"biz_wap/utils/storage.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/storage2a74ac.js",
+						"biz_common/tmpl.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/tmpl2b3578.js",
+						"appmsg/img_copyright_tpl.html.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/img_copyright_tpl.html2a2c13.js",
+						"appmsg/a_tpl.html.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/a_tpl.html2d1390.js",
+						"biz_common/ui/imgonepx.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/ui/imgonepx275627.js",
+						"biz_common/dom/attr.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/attr275627.js",
+						"biz_wap/utils/ajax.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/ajax2c7a90.js",
+						"biz_common/utils/string/html.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/string/html29f4e9.js",
+						"sougou/index.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/sougou/index2c7543.js",
+						"biz_wap/safe/mutation_observer_report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/safe/mutation_observer_report2d5cb8.js",
+						"appmsg/report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/report2cf2a3.js",
+						"biz_common/dom/class.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/class275627.js",
+						"appmsg/report_and_source.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/report_and_source2c0ff9.js",
+						"appmsg/page_pos.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/page_pos2d38d6.js",
+						"appmsg/cdn_speed_report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_speed_report2c57d0.js",
+						"appmsg/voice.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/voice2ab8bd.js",
+						"appmsg/qqmusic.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/qqmusic2ab8bd.js",
+						"appmsg/iframe.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/iframe2ddceb.js",
+						"appmsg/review_image.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/review_image2d0cfe.js",
+						"appmsg/outer_link.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/outer_link275627.js",
+						"biz_wap/jsapi/core.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/core2c30c1.js",
+						"biz_common/dom/event.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/dom/event275627.js",
+						"appmsg/copyright_report.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/copyright_report2c57d0.js",
+						"appmsg/cache.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cache2a74ac.js",
+						"appmsg/pay_for_reading.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/pay_for_reading2c5484.js",
+						"appmsg/async.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/async2da3e2.js",
+						"biz_wap/ui/lazyload_img.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/ui/lazyload_img2b18f6.js",
+						"biz_common/log/jserr.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/log/jserr2805ea.js",
+						"appmsg/share.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/share2daac1.js",
+						"biz_wap/utils/mmversion.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/mmversion275627.js",
+						"appmsg/cdn_img_lib.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/cdn_img_lib275627.js",
+						"biz_common/utils/url/parse.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_common/utils/url/parse2dd7fd.js",
+						"biz_wap/utils/device.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/utils/device2b3aae.js",
+						"biz_wap/jsapi/a8key.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/jsapi/a8key2a30ee.js",
+						"appmsg/index.js": "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/appmsg/index2dd894.js"
+					};
+				</script>
+				<script type="text/javascript" src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/js/biz_wap/moon2c7b0a.js"></script>-->
+				<script id="voice_tpl" type="text/html">
+					<span id="a160" id="voice_main_<#=voiceid#>_<#=posIndex#>" class="db audio_area <#if(!musicSupport){#> unsupport<#}#>">
+            <span id="a161"  class="tc tips_global unsupport_tips" <#if(show_not_support!==true){#><#}#>>
+            当前浏览器不支持播放音乐或语音，请在微信或其他浏览器中播放            </span>
+					<span id="a162" class="audio_wrp db">
+                <span id="a163"  id="voice_play_<#=voiceid#>_<#=posIndex#>" class="audio_play_area">
+                    <i class="icon_audio_default"></i>
+                    <i class="icon_audio_playing"></i>
+                    <img id="a187"  src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/audio/icon_audio_unread26f1f1.png" alt="" class="pic_audio_default">
+                </span>
+					<span id="a164" class="audio_length tips_global"><#=duration_str#></span>
+					<span id="a165" class="db audio_info_area">
+                    <strong id="a243"  class="db audio_title"><#=title#></strong>
+                    <span id="a166"  class="audio_source tips_global"><#if(window.nickname){#>来自<#=window.nickname#><#}#></span>
+					</span>
+					<span id="a167" id="voice_progress_<#=voiceid#>_<#=posIndex#>" class="progress_bar"></span>
+					</span>
+					</span>
+				</script>
+
+				<script id="qqmusic_tpl" type="text/html">
+					<span id="a168" id="qqmusic_main_<#=comment_id#>_<#=posIndex#>" class="db qqmusic_area <#if(!musicSupport){#> unsupport<#}#>">
+            <span id="a169"  class="tc tips_global unsupport_tips" <#if(show_not_support!==true){#><#}#>>
+            当前浏览器不支持播放音乐或语音，请在微信或其他浏览器中播放            </span>
+					<span id="a170" class="db qqmusic_wrp">
+                <span id="a171"  class="db qqmusic_bd">
+                    <span id="a172"  id="qqmusic_play_<#=musicid#>_<#=posIndex#>" class="play_area">
+                        <i class="icon_qqmusic_switch"></i>
+                        <img id="a188"  src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_default.2x26f1f1.png" alt="" class="pic_qqmusic_default">
+                        <img id="a189"  src="<#=music_img#>" data-autourl="<#=audiourl#>" data-musicid="<#=musicid#>" class="qqmusic_thumb" alt="">
+                    </span>
+					<a id="a207" id="qqmusic_home_<#=musicid#>_<#=posIndex#>" href="javascript:void(0);" class="access_area">
+						<span id="a173" class="qqmusic_songname"><#=music_name#></span>
+						<span id="a174" class="qqmusic_singername"><#=singer#></span>
+						<span id="a175" class="qqmusic_source"><img id="a190"  src="http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/icon/appmsg/qqmusic/icon_qqmusic_source263724.png" alt=""></span>
+					</a>
+					</span>
+					</span>
+					</span>
+				</script>
+				<script type="text/javascript">
+					var not_in_mm_css = "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/not_in_mm2c9cd6.css";
+					var windowwx_css = "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/style/page/appmsg/page_mp_article_improve_winwx2c9cd6.css";
+					var tid = "";
+					var aid = "";
+					var clientversion = "0";
+					var appuin = "MjM5Nzg0MTQ3OQ==" || "";
+					var source = "7";
+					var scene = 75;
+					var itemidx = "";
+					var _copyright_stat = "0";
+					var _ori_article_type = "";
+					var nickname = "有书";
+					var appmsg_type = "9";
+					var ct = "1462920977";
+					var publish_time = "2016-05-11" || "";
+					var user_name = "gh_d9de5a6b1aa5";
+					var user_name_new = "";
+					var fakeid = "";
+					var version = "";
+					var is_limit_user = "0";
+					var round_head_img = "http://mmbiz.qpic.cn/mmbiz/GtWwdCwkv7EQ7VicdOpXk3mDCbic2iaZzTrmsVQH5YLXNry5zrzj1YJs46h34ZBIXvrYhbxgHxena0sTUd039kQDg/0?wx_fmt=png";
+					var msg_title = "改变他人其实没那么难";
+					var msg_desc = "领导是一种能力，改变别人更是一种能力。拥有如此智慧的你，请永远坚定的让自己站在人生舞台的正中央，享受万丈荣光。";
+					var msg_cdn_url = "http://mmbiz.qpic.cn/mmbiz/GtWwdCwkv7FSP4ZVPicVsy28CUV6WbNOnREKXuvsQVpxXcM6CeED43XMicicTKDdsWP2ck2x5ia9eHL7rpSdRCZgNQ/0?wx_fmt=jpeg";
+					var msg_link = "http://mp.weixin.qq.com/s?__biz=MjM5Nzg0MTQ3OQ==&amp;mid=2660540977&amp;idx=8&amp;sn=737fa2a6464a6aa6f49b0e9b8dbd0da9#rd";
+					var user_uin = "0" * 1;
+					var msg_source_url = 'http://readooapi.youshu.cc/wechat/readlist?msg=eyJwbGFuIjozMCwicGFjayI6MzI1fQ==#rd';
+					var img_format = 'jpeg';
+					var srcid = '';
+					var networkType;
+					var appmsgid = '' || '2660540977' || "";
+					var comment_id = "0" * 1;
+					var comment_enabled = "" * 1;
+					var is_need_reward = "0" * 1;
+					var is_https_res = ("" * 1) && (location.protocol == "https:");
+					var devicetype = "";
+					var source_username = "";
+					var profile_ext_signature = "" || "";
+					var reprint_ticket = "";
+					var source_mid = "";
+					var source_idx = "";
+					var show_comment = "";
+					var __appmsgCgiData = {
+						can_use_page: "0" * 1,
+						is_wxg_stuff_uin: "0" * 1,
+						card_pos: "",
+						copyright_stat: "0",
+						source_biz: "",
+						hd_head_img: "http://wx.qlogo.cn/mmhead/Q3auHgzwzM7CgEzFibLxxyyLnV6V8K5G7JsicvDHHHuua8xps9RPXySA/0" || (window.location.protocol + "//" + window.location.host + "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/appmsg/pic_rumor_link.2x264e76.jpg")
+					};
+					var _empty_v = "http://res.wx.qq.com/mmbizwap/zh_CN/htmledition/images/pic/pages/voice/empty26f1f1.mp3";
+					var copyright_stat = "0" * 1;
+					var pay_fee = "" * 1;
+					var pay_timestamp = "";
+					var need_pay = "" * 1;
+					var need_report_cost = "0" * 1;
+					var use_tx_video_player = "0" * 1;
+					var friend_read_source = "" || "";
+					var friend_read_version = "" || "";
+					var friend_read_class_id = "" || "";
+					var is_only_read = "1" * 1;
+					window.wxtoken = "";
+					if (!!window.__initCatch) {
+						window.__initCatch({
+							idkey: 27613,
+							startKey: 0,
+							limit: 128,
+							reportOpt: {
+								uin: uin,
+								biz: biz,
+								mid: mid,
+								idx: idx,
+								sn: sn
+							},
+							extInfo: {
+								network_rate: 0.01
+							}
+						});
+					}
+				</script>
+				<!--<script type="text/javascript">
+					seajs.use('appmsg/index.js');
+				</script>-->
+				</div>
+			
+			<!--内容以上-->
+		</div>
+		</div>
+		
+		<div class="bottomTip">
+			<span class="topBtn">小贴士</span>&nbsp;随意点击文章要编辑的位置，即可编辑
+		</div>
+		
+		<div class="adss"><p class="showMore">加载更多...</p></div>
+		
+		<!--完成按钮-->
+		<div class="complete">
+			<div class="comLeft vertivalStyle">
+				ok&nbsp;完成
+			</div>
+			
+			<div class="comMiddle vertivalStyle">
+				
+			</div>
+			
+			<div class="comRight vertivalStyle"  onclick="goBack()">
+				<img id="backIcon" src="images/11.png"/><span id="backTxt">&nbsp;返回</span>
+			</div>
+		</div>
+		
+		
+		
+		<div class="form-group">
+
+							<!--<label for="wheel-demo" style="border:1px solid red;display: inline-block;width: 25px;height: 25px;"></label>-->
+
+							<!--<input type="text" hidden="hidden" id="wheel-demo" class="form-control demo" data-control="wheel" value="#ff99ee">-->
+
+						</div>
+						
+						<script>
+
+		$(document).ready( function() {
+
+			
+
+            $('.demo').each( function() {
+
+				$(this).minicolors({
+
+					control: $(this).attr('data-control') || 'hue',
+
+					defaultValue: $(this).attr('data-defaultValue') || '',
+
+					inline: $(this).attr('data-inline') === 'true',
+
+					letterCase: $(this).attr('data-letterCase') || 'lowercase',
+
+					opacity: $(this).attr('data-opacity'),
+
+					position: $(this).attr('data-position') || 'bottom left',
+
+					change: function(hex, opacity) {
+
+						if( !hex ) return;
+
+						if( opacity ) hex += ', ' + opacity;
+
+						try {
+
+							console.log(hex);
+
+						} catch(e) {}
+
+					},
+
+					theme: 'bootstrap'
+
+				});
+
+                
+
+            });
+
+			
+
+		});
+
+	</script>
+	</body>
+
+</html>

@@ -1,0 +1,103 @@
+@import url("base.css");
+body{
+	background-color: #53cac3;
+}
+
+.top{
+	min-height: 177.5px;
+	bottom: 0;
+	width: 375px;
+	background:url(../images/erwei2_1.png) no-repeat;
+	background-size: 100%;
+	background-position: center center; 
+}
+
+.middle{
+	min-height: 285px;
+	bottom: 0;
+	width: 375px;
+	background:url(../images/erwei2_2.png) no-repeat;
+	background-size: 100%;
+	background-position: center center; 
+	/*border: 1px solid red;*/
+}
+
+.bottom{
+	/*position: absolute;
+	bottom: 0;*/
+	width: 375px;
+	min-height: 210.5px;
+	background:url(../images/erwei1_3.png) no-repeat;
+	background-size: 100%;
+	background-position: center bottom; 
+	/*border: 1px solid red;*/
+}
+
+.erweimaImg{
+	width: 220px;
+	height: 240px;
+	margin: 0 auto;
+	background-color: white;
+	text-align: center;
+}
+
+.erweimaImg img{
+	width: 98%;
+	margin: 0 auto;
+}
+
+.erweimaTip{
+	font-size: 16px;
+	color: #4d1f18;
+	text-align: center;
+	/*padding-top: 5px;*/
+}
+
+.registerBtn{
+	width: 152px;
+	height: 38px;
+	line-height: 38px;
+	margin: -26px auto 0;
+	text-align: center;
+	background-color: #077469;
+	color: white;
+	font-size: 15px;
+	border-radius: 110px;
+}
+
+.bottomTip1{
+	font-size:28px;
+	color: white;
+	text-align: center;
+	margin-top: 10px;
+	/*border: 1px solid green;*/
+}
+
+.bottomTip2{
+	font-size:17px;
+	color: white;
+	text-align: center;
+	margin-top: 12px;
+	color: #02524a;
+}
+
+.bottomTip3{
+	font-size:17px;
+	color: white;
+	text-align: center;
+	margin-top: 12px;
+}
+
+.bottomTip4{
+	font-size:17px;
+	color: white;
+	text-align: center;
+	margin-top: 12px;
+}
+
+.bottomTip5{
+	font-size:17px;
+	color: white;
+	text-align: center;
+	margin-top: 12px;
+}

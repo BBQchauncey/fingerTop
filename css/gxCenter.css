@@ -1,0 +1,149 @@
+@import url("base.css");
+.headImg{
+	position: relative;
+	height: 211px;
+	/*border: 1px solid red;*/
+}
+
+.headTxtStyle{
+	position: absolute;
+	width: 375px;
+	text-align: center;
+	color: white;
+}
+
+.headTxt1{
+	top: 61px;
+	font-size: 20px;
+}
+
+.headTxt2{
+	top: 81px;
+	font-size: 60px;
+}
+
+.headTxt3{
+	width: 138px;
+	height: 25px;
+	top: 140px;
+	left: 50%;
+	margin-left: -69px;
+	line-height: 25px;
+	font-size: 13px;
+	border-radius: 110px;
+	border: 2px solid white;
+}
+
+.headTxt4{
+	top: 169px;
+	font-size: 13px;
+}
+
+.yqglTitle{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	/*border: 1px solid red;*/
+}
+
+.rect{
+	width: 5px;
+	height: 18px;
+	margin-left: 18px;
+	background-color: #53ccc2;
+}
+
+.yqtitle{
+	font-size: 15px;
+	color: #53ccc2;
+}
+
+.myEWMImg{
+	width: 16px;
+	margin-left: 178px;
+}
+
+.myEWMTxt{
+	font-size: 15px;
+	color: #ffa505;
+}
+
+.yqglCtx{
+	margin-bottom: 20px;
+}
+
+.yqCtx{
+	font-size: 14px;
+	padding-left: 0;
+	margin-left: 36px;
+	line-height: 22px;
+}
+
+.myYQ{
+	padding-top: 20px;
+	padding-bottom: 7px;
+}
+
+
+.myYQtitle{
+	font-size: 15px;
+	color: #53ccc2;
+}
+
+.YQItemStyle{
+	position: relative;
+	width: 342px;
+	margin: 0 auto;
+	border-bottom: 1px solid #d4d4d4;
+	padding-top: 13px;
+	padding-bottom: 13px;
+}
+
+.YQImg{
+	width: 32px;
+}
+
+.YQName{
+	font-size: 14px;
+}
+
+.YQTime{
+	font-size: 12.5px;
+	color: #888888;
+}
+
+.addScoreStyle{
+	position: absolute;
+	right: 5px;
+	font-size: 15px;
+}
+
+.mainSoreColor{
+	color: #e53d4f;
+	bottom: 19px;
+}
+
+.YQSubImg{
+	width: 18px;
+	margin-left: 12px;
+}
+
+.subSoreColor{
+	color: #ffa914;
+	bottom: 19px;
+}
+
+.yaoQNone{
+	text-align: center;
+}
+
+.yaoQImg{
+	width: 323px;
+	margin: 33px auto 0;
+}
+
+.yaoQNoneDesc{
+	color: #53cac3;
+	font-size: 15px;
+	padding-top: 37px;
+	padding-bottom: 37px;
+}

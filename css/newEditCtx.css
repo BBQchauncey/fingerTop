@@ -1,0 +1,111 @@
+.newAds{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/1.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-left: 28px;
+	margin-top: 16px;
+}
+
+.newMusic{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/2.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-left: 23px;
+	margin-top: 16px;
+	
+}
+
+
+
+.newText{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/5.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-left: 15px;
+	margin-top: 16px;
+}
+
+
+.upper{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/7.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-top: 8px;
+	margin-left: 16px;
+}
+
+
+
+.newVideo{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/9.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-left: 28px;
+	margin-top: 8px;
+	
+}
+
+.newDel{
+	width: 91px;
+	/*width: 33%;*/
+	height: 40px;
+	line-height: 40px;
+	text-align: center;
+	/*padding: 20px;*/
+	background: url(../images/10.png) no-repeat;
+	background-size: 30%;
+	background-position: center left;
+	padding-left: 20px;
+	/*border: 1px solid red;*/
+	margin-top: 8px;
+	margin-left: 21px;
+}
+
+.newCancel{
+	position: relative;
+	width: 34px;
+	margin: 25px auto 0;
+	font-size: 28px;
+	/*border: 1px solid red;*/
+}
+

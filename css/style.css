@@ -1,0 +1,270 @@
+@charset "utf-8";
+
+html{
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+img{
+	display: block;
+	width: 100%;
+	border: none;
+}
+
+a{
+	color: black;
+}
+
+body{
+	font-family: "微软雅黑";
+	width: 375px;
+	margin: 0 auto;
+	/*-webkit-text-size-adjust: 100%!important;*/
+}
+
+*{
+	padding: 0;
+	margin: 0;
+}
+
+.swiper-container{
+	width: 375px;
+	height: 211px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+
+.login{
+	position: relative;
+	height: 65px;
+}
+
+.loginImg{
+	position: absolute;
+	top: 13px;
+	left: 13px;
+	width: 40px;
+}
+
+.loginDesc{
+	position: absolute;
+	top:24px;
+	left: 65px;
+	font-size: 16px;
+	color: #a9a9a9;
+}
+
+.loginBtn{
+	position: absolute;
+	top: 18px;
+	right:13px ;
+	width: 74px;
+	height: 32px;
+	font-size: 17px;
+	line-height:32px;
+	text-align: center;
+	color: white;
+	border-radius:110px;
+	background-color: #53ccc4;
+}
+
+.fenge{
+	height: 11px;
+	background-color: #f6f6f9;
+	border: 1px solid #eff1f3;
+}
+
+.funcArea{
+	position: relative;
+	height: 172px;
+	/*text-align: center;*/
+	/*border: 1px solid red;*/
+}
+
+.vertivalLine{
+	position: absolute;
+	left: 187.5px;
+	top: 20px;
+	height: 130px;
+	border-left: 1px solid #eff1f3;
+}
+
+.funcAreaOne{
+	position: relative;
+	height: 86px;
+	border-bottom: 1px solid #eff1f3;
+}
+
+.leftDiv{
+	position: absolute;
+	top: 20px;
+	left: 15px;
+}
+
+.rightDiv{
+	position: absolute;
+	top: 20px;
+	left: 200px;
+}
+
+.vertivalStyle{
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.imgCtx{
+	width: 35px;
+}
+
+.mainTitle{
+	font-size: 16px;
+}
+
+.subTitle{
+	font-size: 13px;
+	color: #d4d4d4;
+}
+
+.funcAreaTwo{
+	position: relative;
+	height: 86px;
+	/*border-bottom: 1px solid #dddddd;*/
+}
+
+.vipPay{
+	color: #44b3ff;
+}
+
+
+.vipLine{
+	position: absolute;
+	left: 187.5px;
+	top: 20px;
+	height: 50px;
+	border-left: 1px solid #eff1f3;
+}
+
+
+.footer{
+	padding-top:19px ;
+}
+
+.footerCtx{
+	background-color: #53ccc4;
+	padding-top: 63px;
+	padding-bottom: 20px;
+	min-height: 332px;
+}
+
+.zhijianIntro{
+	width: 211.5px;
+	margin:0 auto;
+}
+
+.userPrincipeAndSuggest{
+	position: relative;
+	margin: 0 auto;
+	padding-top: 60px;
+}
+
+.userPrincipeAndSuggestStyle{
+	width: 148px;
+	/*height: 43px;
+	line-height: 43px;*/
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: #32b2aa;
+	text-align: center;
+	border-radius: 110px;
+}
+
+.principleImg{
+	width: 26px;
+	/*border: 1px solid red;*/
+}
+
+.principleTxt{
+	font-size: 17px;
+	color: white;
+}
+
+.userPrinciple{
+	position: absolute;
+	left: 30px;
+}
+
+.suggestImg{
+	width: 26px;
+}
+
+.suggestTxt{
+	font-size: 17px;
+	color: white;
+}
+
+.suggest{
+	position: absolute;
+	right: 30px;
+}
+
+
+.website{
+	margin-top: 20px;
+	font-size: 15px;
+	color: #a0f2ee;
+	text-align: center;
+}
+
+.copyRight{
+	padding-top: 8px;
+	font-size: 15px;
+	color: #a0f2ee;
+	text-align: center;
+}
+
+.discount{
+	position: absolute;
+	top: 0px;
+	left:105px ;
+	text-align: center;
+	padding: 1px 1px;
+	font-size: 13px;
+	color: #fc4d5a;
+	border-radius: 3px;
+	border: 1px solid #fc4d5a;
+}
+
+.noneBottom{
+	border-bottom: none;
+}
+
+.swiper-pagination{
+	/*text-align: right;*/
+	margin-left: 130px;
+}
+
+.swiper-pagination-bullet{
+	background-color: white;
+	margin: 0 3px !important;
+}
+
+.swiper-pagination-bullet-active{
+	background-color: gray;
+}
+
+
+.erweimaCtx{
+	margin: 80px auto 0;
+	text-align: center;
+}
+
+.erweimaImg{
+	width: 175px;
+	margin: 0 auto;
+}
+
+.erweimaCtx p{
+	font-size:15px ;
+	color: #4f140e;
+}

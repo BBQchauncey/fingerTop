@@ -1,0 +1,92 @@
+@import url("base.css");
+
+.loginCtx{
+	height: 100vh;
+	background: url(../images/loginBg.jpg) no-repeat;
+	background-size: cover;
+	background-position: center center;
+}
+
+.headImg{
+	width: 272px;
+	margin: 0 auto;
+	padding-top: 51px;
+}
+
+.inputCtxStyle{
+	width: 326px;
+	height: 47px;
+	line-height: 47px;
+	background-color: rgba(255,255,255,0.2);
+	border-radius: 110px;
+	margin: 43px auto 0;
+	color: white;
+	font-size: 14px;
+}
+
+.textStyle{
+	margin-left: 21px;
+}
+
+.vertivalLine{
+	height: 21px;
+	margin-left: 11px;
+	border-right: 1px solid white;
+}
+
+.passportCtx{
+	margin-top: 15px;
+}
+
+
+.loginBtn{
+	background-color: #50ccc4;
+	text-align: center;
+	font-size: 16px;
+	margin-top: 61px;
+}
+
+
+.loginTip{
+	color: #7edddf;
+	font-size: 14px;
+	margin-top: 100px;
+	text-align: center;
+}
+
+.getPassport{
+	display: inline-block;
+	width: 109px;
+	height: 29px;
+	line-height: 29px;
+	color: white;
+	text-align: center;
+	font-size: 14px;
+	border: 2px solid white;
+	border-radius: 110px;
+	
+}
+
+a{
+	font-size: 14px;
+	text-decoration: none;
+}
+
+input{
+	background-color: transparent;
+	/*border: 1px solid red;*/
+	margin-left: 10px;
+	padding:12px 0;
+	color: white;
+}
+
+#passport{
+	width: 100px;
+	/*border: 1px solid red;*/
+	
+}
+
+::-webkit-input-placeholder{
+	font-size: 14px;
+	color: white;
+}

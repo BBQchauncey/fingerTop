@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>个人中心</title>
+		<link rel="stylesheet" type="text/css" href="css/personalInfor.css" />
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<meta name="format-detection" content="telephone=no">
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="areaOne">
+			<div class="headImg divStyle">
+				<div class="headImgCtx ctxStyle">
+					<p class="headImgTxt">头像</p>
+					<div class="headImgObj">
+						<img src="images/fenghuang.jpg" />
+					</div>
+				</div>
+			</div>
+
+			<div class="userName divStyle">
+				<div class="userNameCtx ctxStyle">
+					<p class="userNameTxt leftTxtStyle">用户名称</p>
+					<div class="userNameObj rightTxtStyle">彭马撒</div>
+				</div>
+			</div>
+
+			<div class="phone divStyle">
+				<div class="phoneCtx ctxStyle">
+					<p class="phoneTxt leftTxtStyle">手机号</p>
+					<div class="phoneObj rightTxtStyle">13871058142</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fenge"></div>
+
+		<div class="areaTwo">
+			<div class="weichat divStyle" onclick="showObj('weixinInput')">
+				<div class="weichatCtx ctxStyle">
+					<p class="weichatTxt leftTxtStyle">微信号</p>
+					<div class="weichatObj rightTxtStyle">用于账户提现，请认真填写</div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="passportTip divStyle" onclick="showObj('passportTipAns')">
+				<div class="passportTipCtx ctxStyle">
+					<p class="passportTipTxt leftTxtStyle">设置密码保护</p>
+					<div class="passportTipObj rightTxtStyle">用于用户账户找回</div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fenge fg2"></div>
+
+		<div class="areaThree">
+			<div class="weigui divStyle" onclick="showObj('publishItem')">
+				<div class="weiguiCtx ctxStyle">
+					<p class="weiguiTxt leftTxtStyle">违规记录</p>
+					<div class="weiguiObj rightTxtStyle">无</div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="tuig divStyle" onclick="showObj('copyLink')">
+				<div class="tuigCtx ctxStyle">
+					<p class="tuigTxt leftTxtStyle">我的推广链接</p>
+					<div class="tuigObj rightTxtStyle">http://www.baidu.com</div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+
+			<div class="erWM divStyle" onclick="showObj('myErWM')">
+				<div class="erWMCtx ctxStyle">
+					<p class="erWMTxt leftTxtStyle">我的二维码</p>
+					<div class="erWMObj rightTxtStyle"><img src="images/erweima.png" /></div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="fenge fg2"></div>
+
+		<div class="areaFour">
+
+			<div class="kefu divStyle">
+				<div class="kefuCtx ctxStyle">
+					<p class="kefuTxt leftTxtStyle">客服电话</p>
+					<div class="kefuObj rightTxtStyle">400-8888-9999</div>
+					<div class="rightArrow">
+						<img src="images/arrow2.png" />
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="loginOut">
+			<div class="loginOutBtn">
+				退出登录
+			</div>
+		</div>
+
+		<!--微信号-->
+		<div class="floatPage">
+			<!--微信-->
+			<div class="weixinInput">
+				<input type="text" name="" id="weixin" value="" placeholder="输入微信号" />
+				<span class="clear" onclick="clearinput('weixin')">×</span>
+			</div>
+
+			<!--复制推广链接-->
+			<div class="copyLink">
+				<textarea name="link" id="linkId" value="www.baidu.com">www.baidu.com</textarea>
+				<div class="copyLinkBtn">
+					复制链接
+				</div>
+			</div>
+
+			<!--违规记录-->
+			<div class="publishItem" >
+				<div class="itemTop">
+					<div class="adsTitleImg vertivalStyle">
+						<img src="images/fenghuang.jpg" />
+					</div>
+
+					<div class="adsTitle vertivalStyle">
+						事故发生的分公司分公司发电公司发电公司分
+					</div>
+				</div>
+
+				<div class="itemMiddle">
+					<div class="adsDescImg vertivalStyle">
+						<img src="images/vipBg.png" />
+					</div>
+
+					<div class="adsDescTitle vertivalStyle">
+						事故发生的分公司分公司发电公司发电公司分
+					</div>
+				</div>
+
+				<div class="newLine"></div>
+
+				<div class="time">
+					<span>5-6</span>&nbsp;<span>09:07</span>
+				</div>
+
+				<div class="weiguiReson">
+					查看违规原因
+				</div>
+
+				<div class="btns">
+					<div class="shareBtn btnStyle">
+						编辑
+					</div>
+				</div>
+
+				<div class="delBtn">
+					×
+				</div>
+			</div>
+			<!--我的二维码-->
+			<div class="myErWM">
+				<div class="personalDetail">
+					<div class="headImgBlock vertivalStyle">
+						<img src="images/qq.jpg" />
+					</div>
+
+					<div class="personalDetailName vertivalStyle">
+						<p class="name">张忠祥</p>
+						<p class="shareDesc">邀请好友加入指尖传播</p>
+					</div>
+				</div>
+
+				<div class="ewmImg">
+					<div class="ewmimgCtx">
+						<img src="images/1464277861.png" />
+					</div>
+
+				</div>
+
+				<p class="shareLink">分享我的名片</p>
+			</div>
+
+			<!--密码保护-->
+			<div class="passportTipAns" >
+				<div class="passportTopOne">
+					<div class="weigui divStyle wenti">
+						<div class="weiguiCtx ctxStyle">
+							<p class="weiguiTxt leftTxtStyle">问题1</p>
+							<div class="weiguiObj rightTxtStyle passportdan">无</div>
+							<div class="rightArrow">
+								<img src="images/arrow2.png" />
+							</div>
+						</div>
+					</div>
+
+					<div class="passportCtx divStyle">
+						<div class="tuigCtx ctxStyle">
+							<p class="tuigTxt leftTxtStyle">答案</p>
+							<input type="text" name="daan1" id="daan1" class="inputStyle" value="" />
+							<div class="tuigObj rightTxtStyle passportSub">ok完成</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="fenge2"></div>
+
+				<div class="passportTopTwo">
+					<div class="weigui divStyle wenti">
+						<div class="weiguiCtx ctxStyle">
+							<p class="weiguiTxt leftTxtStyle">问题2</p>
+							<div class="weiguiObj rightTxtStyle passportdan">无</div>
+							<div class="rightArrow">
+								<img src="images/arrow2.png" />
+							</div>
+						</div>
+					</div>
+
+					<div class="passportCtx divStyle">
+						<div class="tuigCtx ctxStyle">
+							<p class="tuigTxt leftTxtStyle">答案</p>
+							<input type="text" name="daan2" id="daan2" class="inputStyle" value="" />
+							<div class="tuigObj rightTxtStyle passportSub">ok完成</div>
+
+						</div>
+					</div>
+				</div>
+
+				<div class="fenge2"></div>
+
+				<div class="passportTopThree">
+					<div class="weigui divStyle wenti">
+						<div class="weiguiCtx ctxStyle">
+							<p class="weiguiTxt leftTxtStyle">问题3</p>
+							<div class="weiguiObj rightTxtStyle passportdan">无</div>
+							<div class="rightArrow">
+								<img src="images/arrow2.png" />
+							</div>
+						</div>
+					</div>
+
+					<div class="passportCtx divStyle">
+						<div class="tuigCtx ctxStyle">
+							<p class="tuigTxt leftTxtStyle">
+								答案
+							</p>
+
+							<input type="text" name="daan3" id="daan3" class="inputStyle" value="" />
+
+							<div class="tuigObj rightTxtStyle passportSub">ok完成</div>
+
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--密保问题-->
+			<div class="mibaoCtx">
+				<div class="mibaoItem divStyle">
+					<div class="weiguiCtx ctxStyle">
+						<p class="weiguiTxt leftTxtStyle">您父亲的名字叫什么</p>
+						<div class="rightduigou">
+							<img src="images/duigou2.png" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="mibaoItem divStyle">
+					<div class="weiguiCtx ctxStyle">
+						<p class="weiguiTxt leftTxtStyle">您父亲的名字叫什么</p>
+						<div class="rightduigou">
+							<img src="images/duigou2.png" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="mibaoItem divStyle">
+					<div class="weiguiCtx ctxStyle">
+						<p class="weiguiTxt leftTxtStyle">您父亲的名字叫什么</p>
+						<div class="rightduigou">
+							<img src="images/duigou2.png" />
+						</div>
+					</div>
+				</div>
+				
+				<div class="mibaoItem divStyle">
+					<div class="weiguiCtx ctxStyle">
+						<p class="weiguiTxt leftTxtStyle">您父亲的名字叫什么</p>
+						<div class="rightduigou">
+							<img src="images/duigou2.png" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script>
+			function hideSelf(){
+				$('.'+arguments[0]).hide()
+				$('.passportTipAns').show()
+				
+				// $('.floatPage').hide()
+			}
+			
+			function showObj(){
+				$('.'+arguments[0]).show()
+				$('.'+arguments[0]).addClass('activeShow')
+				
+				$('.activeShow').on('click',function(e){
+					e.stopPropagation()
+				})
+				$('.floatPage').show()
+			}
+			
+		
+			
+			function clearinput() {
+				$('#' + arguments[0]).val('')
+			}
+			$(function() {
+				$('.copyLinkBtn').click(function() {
+					var linkVal = $('#linkId').val();
+					copyText('linkVal')
+				})
+				
+				$('.mibaoCtx').click(function(e){
+					e.stopPropagation()
+					$(this).hide()
+					$('.passportTipAns').show()
+				})
+				
+				$('.floatPage').click(function(){
+					$(this).hide();
+					$('.activeShow').hide();
+					$('.activeShow').off('click')
+					$('.activeShow').removeClass('activeShow')
+				})
+				
+				$('.wenti').click(function(){
+					$('.passportTipAns').hide()
+					$('.mibaoCtx').show();
+				})
+				
+				$('.mibaoItem').click(function(e){
+					e.stopPropagation()
+					$('.rightduigou').hide()
+					$(this).children().children().eq(1).show()
+				})
+			})
+
+			function copyText(obj) {
+				try {
+					setClipboardText(event, obj)
+					alert("已经复制");
+				} catch (e) {
+					alert("您的浏览器不支持此复制功能，请选中相应内容并使用Ctrl+C进行复制!");
+				}
+			}
+
+			function setClipboardText(event, value) {
+				if (event.clipboardData) {
+					return event.clipboardData.setData("text/plain", value);
+				} else if (window.clipboardData) {
+					return window.clipboardData.setData("text", value);
+				}
+			};
+		</script>
+	</body>
+
+</html>

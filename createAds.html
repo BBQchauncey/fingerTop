@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>创建广告</title>
+		<meta name="viewport" content="width=375,maximum-scale=10,user-scalable=no">
+		<link rel="stylesheet" type="text/css" href="css/createAds.css" />
+		<link rel="stylesheet" type="text/css" href="css/alert.css"/>
+		<script src="js/jquery-1.11.2.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/exif.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/createAds.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/alert.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body>
+		<div class="header">
+			<div class="headLeft vertivalStyle clickFlag headerActive">创建</div>
+			<div class="headRight vertivalStyle clickFlag">历史</div>
+		</div>
+
+		<div class="creatTab">
+			<form id="id_ads_form">
+				<div class="adsDesc">
+					<textarea id="adsDesc" name="adsDesc" maxlength="20" placeholder="请输入20字内广告描述"></textarea>
+					<div class="adsDescBtn clear">×</div>
+				</div>
+
+				<div class="fenge"></div>
+
+				<div class="adsLink">
+					<textarea id="adsLink" name="adsLink" placeholder="长按输入框即可粘贴链接,您的淘宝店,公众号、官网等，用户点击图片即可进入哦"></textarea>
+					<div class="adsLinkBtn clear">×</div>
+					<div class="addAdsLink">插入广告链接</div>
+				</div>
+
+				<div class="fenge"></div>
+
+				<div class="addPic">
+					<p class="addPicTxt">&bull;&nbsp;添加图片</p>
+					<div class="labelImgDiv">
+						<label class="labelImg" for="addFile"><img class="imgCxt" /></label>
+						<div class="delImgCtx"><div class="delImg">×</div></div>
+					</div>
+					<input type="file" name="addFile" id="addFile" value="" accept="image/*"  hidden="hidden" onchange="changeImg(this)" />
+					<label class="addFile" for="addFile">
+						<p class="plus">+</p>
+						<p class="plusTxt">添加图片</p>
+						<p class="plusDesc">上传吸睛的商品图片，用户点击图片后会跳转至您粘贴的网址</p>
+					</label>
+				</div>
+
+				<label for="submitBtn" class="submitBtn">提交审核</label>
+				<input id="submitBtn" type="submit" value="" hidden="hidden" />
+			</form>
+
+			<!--<div class="addPicIntro">
+				<p class="addPicIntroCtx">注释：“添加图片”仅能上传一张图片，上传后如需换图，点击已上传图片即可，上传后图片按原比例缩小限宽不限高显示</p>
+			</div>-->
+		</div>
+
+		<!--tab 历史-->
+		<div class="historyTab">
+			<!--没有历史广告的时候显示改div-->
+			<div class="noneAds">
+				您尚未创建过广告哦快去创建吧
+			</div>
+			<!--没有历史广告end-->
+
+			<!--有历史广告的样式-->
+			<!--<div class="hisAds noPic">
+				<div class="adsImg">
+					<img src="images/vipBg.png" />
+				</div>
+
+				<p class="adsTitle">这里是用户输入的广告描述20个字</p>
+				<p class="time">2016-06-15 12:51</p>
+				<p style="color:#fcaf2a">广告点击量200</p>
+
+				<div class="edit vertivalStyle hisBtnStyle">
+					编辑
+				</div>
+
+				<div class="delBtn vertivalStyle hisBtnStyle">
+					删除
+				</div>
+
+				<div class="adsStatus orange">
+					审核中
+				</div>
+
+				<div class="delHisAds">
+					×
+				</div>
+			</div>-->
+			
+			<p class="showMore">加载更多...</p>
+		</div>
+		<canvas id="myCanvas" hidden="hidden"></canvas>
+		
+		<div class="tanchuang">
+			<div class="winTop">
+				<!--提交成功-->
+			</div>
+			<div class="winBottom">
+				提交后的广告可在<br>创建广告-历史 中查看
+			</div>
+			
+			<div class="closeWin">
+				<img src="images/12.png"/>
+			</div>
+		</div>
+		
+		<div class="ajaxLoading">
+			<div class="ajaxImg">
+				<img src="images/ajax-loader.gif"/>
+			</div>
+		</div>
+		
+		<!--modify ads input 存储广告id-->
+		<input type="text" name="modifyAdsId" id="modifyAdsId" value="" hidden="hidden" />
+		<!--<input type="text" name="modifyAdsImgUrl" id="modifyAdsImgUrl" value="" hidden="hidden" />-->
+	</body>
+
+</html>
