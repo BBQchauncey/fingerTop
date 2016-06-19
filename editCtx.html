@@ -18,19 +18,19 @@
 		<script src="js/ok8sedit.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/jquery.minicolors.js" type="text/javascript" charset="utf-8"></script>
 		<script src="js/alert.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
 	</head>
 
 	<body>
 		<div id="xxpage">
 			<div id="mymodal"></div>
-			<div class="musicDiv">
-				
-			</div>
 			<div id="main">
 				<!--<div class="cb n5"></div>-->
 				<!--把后台处理的页面放入main_ok8s_body里面，请把viewport 去掉-->
 				<div id="main_ok8s_body" style="display:block;">
-					
+					<div id="bg_music" class="musicDiv">
+				
+					</div>
 					<!--<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 					<meta http-equiv="X-UA-Compatible" content="IE=edge">
 					<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
@@ -731,65 +731,46 @@
 			</div>
 		</div>
 		
-		
-		
-		<div class="form-group">
-
-							<!--<label for="wheel-demo" style="border:1px solid red;display: inline-block;width: 25px;height: 25px;"></label>-->
-
-							<!--<input type="text" hidden="hidden" id="wheel-demo" class="form-control demo" data-control="wheel" value="#ff99ee">-->
-
-						</div>
-						
-						<script>
-
-		$(document).ready( function() {
-
+		<!--分享 网页底部的分享样式，样式全在 share.css里面-->
+		<div class="share">
+			<div class="shareDivigin">
+				<img src="images/xuxian.png"/>
+			</div>
 			
-
-            $('.demo').each( function() {
-
-				$(this).minicolors({
-
-					control: $(this).attr('data-control') || 'hue',
-
-					defaultValue: $(this).attr('data-defaultValue') || '',
-
-					inline: $(this).attr('data-inline') === 'true',
-
-					letterCase: $(this).attr('data-letterCase') || 'lowercase',
-
-					opacity: $(this).attr('data-opacity'),
-
-					position: $(this).attr('data-position') || 'bottom left',
-
-					change: function(hex, opacity) {
-
-						if( !hex ) return;
-
-						if( opacity ) hex += ', ' + opacity;
-
-						try {
-
-							console.log(hex);
-
-						} catch(e) {}
-
-					},
-
-					theme: 'bootstrap'
-
-				});
-
-                
-
-            });
-
+			<div class="shareWeixinTip">
+				<span class="shareLine"></span><span class="shareWeixinTipTxt">喜欢本文，点击页面右上角···分享至朋友圈把</span><span class="shareLine"></span>
+			</div>
 			
-
-		});
-
-	</script>
+			<div class="shareOtherTip">
+				·&nbsp;您也可以分享至其他平台&nbsp;·
+			</div>
+			
+			<div class="shareBtn">
+				<ul>
+					<li><img src="images/weibo.png"/><p>微博<p></li>
+					<li><img src="images/qqFriend.png"/><p>QQ<p></li>
+					<li><img src="images/qqZone.png"/><p>空间<p></li>
+					<li><img src="images/tieba.png"/><p>贴吧<p></li>
+					<li><img src="images/douban.png"/><p>豆瓣<p></li>
+				</ul>
+			</div>
+			
+			<div class="focusZhijian">
+				<img src="images/guanzhu.png"/>
+			</div>
+			
+			<p class="mianze">文章来源于网络，并经用户二次创作，若有侵权请联系删除<br>如文章涉及黄，赌，毒，谣言，诱导分享等违规内容请举报</p>
+			<div class="jubao">
+				<img src="images/jubao.png"/>
+			</div>
+		</div>
+		
+		<script src="js/getParaTags.js" type="text/javascript" charset="utf-8"></script>
+		<script>
+			console.log('desc:'+desc)
+			console.log('title:'+title)
+			console.log('imgUrl:'+imageUrl)
+		</script>
 	</body>
 
 </html>

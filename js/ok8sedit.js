@@ -16,6 +16,7 @@ var delArr = [];
 var htmlStatus = [];
 var alreayGet = true;
 var pageNo = 0;
+var editStatus = true
 function ok8spost() {
     if ($("#q_tit").length > 0 && $("#q_okbtn").length > 0) {
         subques()
@@ -156,7 +157,7 @@ function showmenu() {
   
 	//data-h="javascript:{ojax(\'/file/alist\');this.disabled=true;}"
 	// var htm = '<div class="menu"><div class="lineOne"><div class="ads vertivalStyle">插广告</div><div class="music vertivalStyle xn" data-h="addMusic()">插音乐</div><div class="delUp xn vertivalStyle" data-h="delete_up_down(\'up\')">删除前</div></div><div class="lineTwo"><div class="text vertivalStyle xn" data-h="addTxt()">插文字</div><div class="pic vertivalStyle xn" data-h="inputDiv()">插图片</div><div class="delDown vertivalStyle xn" data-h="delete_up_down(\'down\')">删除后</div></div><div class="lineThree"><div class="link vertivalStyle xn" data-h="linkDiv()">写链接</div><div class="video vertivalStyle xn" data-h="videoDiv()">插视频</div><div class="del vertivalStyle xn" data-h="ok8sdel();">删除</div></div><div class="cancelBtn" ><img class="xn" data-h="editcancel();" src="images/12.png"></div></div>'
-	var htm = '<div class="menu"><div class="lineOne"><div class="newAds vertivalStyle xn" data-h="getHistoryDatas()">插广告</div><div class="newText vertivalStyle xn" data-h="addTxt()">插文字</div><div class="newMusic vertivalStyle xn" data-h="addMusic()">插音乐</div></div><div class="lineTwo"><div class="newVideo vertivalStyle xn" data-h="videoDiv()">插视频</div><div class="upper xn vertivalStyle" data-h="upper()">上一步</div><div class="newDel vertivalStyle xn" data-h="ok8sdel();">删<span style="visibility:hidden">占</span>除</div></div><div class="newCancel" ><img class="xn" data-h="editcancel();" src="images/12.png"></div></div>'
+	var htm = '<div class="menu"><div class="lineOne"><div class="newAds vertivalStyle xn" data-h="getHistoryDatas()">插广告</div><div class="newText vertivalStyle xn" data-h="setTimeout(addTxt,200)">插文字</div><div class="newMusic vertivalStyle xn" data-h="setTimeout(addMusic,500)">插音乐</div></div><div class="lineTwo"><div class="newVideo vertivalStyle xn" data-h="videoDiv()">插视频</div><div class="upper xn vertivalStyle" data-h="upper()">上一步</div><div class="newDel vertivalStyle xn" data-h="ok8sdel();">删<span style="visibility:hidden">占</span>除</div></div><div class="newCancel" ><img class="xn" data-h="editcancel();" src="images/12.png"></div></div>'
    
 // htm+=' <div class="k xn c6 pa20 r33" data-h="editword()">插文字</div>'
     var utype = getkey("utype");
@@ -183,11 +184,20 @@ function editword() {
 }
 
 function addMusic(){
-	var htm = '<div class="inputDiv"><div class="zanwei"></div><div class="inputCtx"><textarea id="inputArea" placeholder="点击输入框，长按粘贴链接"></textarea></div><div class="cancelBtn vertivalStyle"><img class="xn" data-h="editcancel()" src="images/12.png"/></div><div class="add cancelBtn vertivalStyle"><img class="xn" data-h="musicTag()" src="images/yuanDuigou.png"/></div></div>'
+	// var htm = '<div class="inputDiv"><div class="zanwei"></div><div class="inputCtx"><textarea id="inputArea" placeholder="点击输入框，长按粘贴链接"></textarea></div><div class="cancelBtn vertivalStyle"><img class="xn" data-h="editcancel()" src="images/12.png"/></div><div class="add cancelBtn vertivalStyle"><img class="xn" data-h="musicTag()" src="images/yuanDuigou.png"/></div></div>'
+	var htm = '<div class="inputDivnew"><div class="zanwei"></div><div class="inputCtxnew"><textarea id="inputArea" placeholder="点击输入框，长按粘贴链接"></textarea></div><div class="musicKu"><p class="musicItemStyle">音乐库:</p><div class="musicItem" onclick="addLinkToInput(this)" musicUrl="http://www.w3school.com.cn/i/song.mp3">音乐1</div></div><div class="cancelBtn vertivalStyle"><img class="xn" data-h="editcancel()" src="images/12.png"/></div><div class="add cancelBtn vertivalStyle"><img class="xn" data-h="musicTag()" src="images/yuanDuigou.png"/></div></div>'
     $("#ok8sedit").html(htm)
+    for(var i=0;i<10;i++){
+    	$('.musicKu').append('<div class="musicItem" onclick="addLinkToInput(this)" musicUrl="http://www.w3school.com.cn/i/song.mp3">音乐1</div>')
+    }
     $('.complete').hide()
     
 
+}
+
+function addLinkToInput(obj){
+	var musicUrl = $(obj).attr('musicUrl');
+	$('#inputArea').val(musicUrl)
 }
 
 function insetAds(obj){
@@ -196,7 +206,7 @@ function insetAds(obj){
 	var link_url = $(obj).attr('link_url').trim();
 	select_id = $("#bigger").val();
     select_id++;
-	var html = '<a href="'+link_url+'" class="pa20"><img id="a' + select_id + '" src="'+photo_url+'"></a><a href="'+link_url+'"><p id="a' + select_id + '" style="text-align:center;color:#4ad6c4;margin-top:-13px">'+title+'</p></a>'
+	var html = '<a href="javascript:void(0);aTagJump('+link_url+')" class="pa20"><img id="a' + select_id + '" src="'+photo_url+'"></a><a href="javascript:void(0);aTagJump('+link_url+')"><p id="a' + select_id + '" style="text-align:center;color:#b1c0d3;margin-top:-13px">'+title+'</p></a><div><img src="images/test.gif"></div>'
 	p_obj.after(html);
 	$('.adss').hide()
 	if ($(".c7").length > 0) {
@@ -468,6 +478,8 @@ function showedit(type) {
     showmenu()
 }
 $(document).ready(function() {
+	$('.bottomTip').show()
+	$('.complete').show()
 	setid('#main_ok8s_body')
     readyok1();
    	var HTML = $('#main_ok8s_body').html();
@@ -491,6 +503,12 @@ function charu() {
     if(txt==undefined){
     	return
     }
+    
+    if(txt.indexOf('script')!=-1){
+    	swal("非法字符")
+    	return
+    }
+    
     if ($(".c7").length > 0) {
         $(".c7").removeClass("c7 pa5")
     }
@@ -511,6 +529,8 @@ function charu() {
     updateHtml()
     showmodal(0)
 }
+
+
 function okimgadd(url) {
     select_id = $("#bigger").val();
     select_id++;
@@ -863,7 +883,7 @@ function musicTag(){
     if (url.indexOf("http") == 0) {
         source = '<source src="' + url + '" >'
     }
-    var html = '<audio hidden="hidden" autoplay="autoplay" loop="loop"  preload="preload" id="a' + select_id + '" class="">' + source + "</audio>";
+    var html = '<img id="controlBgMusic" class="rotate" onclick="startMusic()" style="width:60%" src="images/open_icon.png" /><audio id="myMusic" hidden="hidden" autoplay="autoplay" loop="loop"  preload="preload" id="a' + select_id + '" class="">' + source + "</audio>";
     $('.musicDiv').html(html);
     if ($(".c7").length > 0) {
         $(".c7").removeClass("c7 pa5")
@@ -872,6 +892,7 @@ function musicTag(){
     $("#ok8sinput").remove();
     updateHtml()
     showmodal(0)
+    musicPlay()
 }
 
 function goBack(){

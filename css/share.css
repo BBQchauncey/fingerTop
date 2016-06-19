@@ -1,0 +1,63 @@
+.share{
+	width: 339px;
+	margin:10px auto 0;
+	color: #979797;
+	text-align: center;
+}
+
+.shareWeixinTip{
+	padding-top: 18px;
+	font-size: 13px;
+}
+
+.shareOtherTip{
+	padding-top: 60px;
+	font-size: 15px;
+}
+
+.shareBtn{
+	padding-top: 20px;
+}
+
+.shareBtn ul{
+	letter-spacing: 30px;
+}
+
+.shareBtn ul li{
+	width: 38px;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.shareBtn ul li p{
+	font-size: 13px;
+	letter-spacing: initial;
+}
+
+.focusZhijian{
+	padding-top: 22px;
+}
+
+.mianze{
+	font-size: 13px;
+	padding-top: 33px;
+	display: inline-block;
+}
+
+.jubao{
+	width: 87px;
+	margin: 0 auto;
+	padding-top: 24px;
+}
+
+.shareLine{
+	width: 27.5px;
+	border-top: 1px solid #979797;
+	display: inline-block;
+	vertical-align: middle;
+}
+
+.shareWeixinTipTxt{
+	display: inline-block;
+	vertical-align: middle;
+}

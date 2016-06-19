@@ -1,24 +1,26 @@
 @import url("base.css");
 @import url("newEditCtx.css");
 @import url("editAdsList.css");
-
-body{
+@import url("share.css");
+body {
 	/*width: 100%;*/
 	/*margin: 0 auto;*/
+	padding-bottom: 100px;
 }
 
-img{
+img {
 	width: auto;
 }
 
-#main_ok8s_body{
+#main_ok8s_body {
 	position: relative;
 }
-.xxpage{
+
+.xxpage {
 	margin: 0 auto;
 }
 
-.bottomTip{
+.bottomTip {
 	position: fixed;
 	bottom: 0;
 	width: 100%;
@@ -29,14 +31,16 @@ img{
 	color: white;
 	font-size: 13px;
 	z-index: 3;
+	display: none;
 }
-.topBtn{
-	padding:2px 4px;
+
+.topBtn {
+	padding: 2px 4px;
 	background-color: #fe5b83;
 	border-radius: 4px;
 }
 
-.menu{
+.menu {
 	/*width: 95%;*/
 	position: absolute;
 	width: 356px;
@@ -53,7 +57,7 @@ img{
 	font-family: "微软雅黑" !important;
 }
 
-.ads{
+.ads {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -69,7 +73,7 @@ img{
 	margin-top: 16px;
 }
 
-.music{
+.music {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -83,10 +87,9 @@ img{
 	/*border: 1px solid red;*/
 	margin-left: 12px;
 	margin-top: 16px;
-	
 }
 
-.delUp{
+.delUp {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -102,8 +105,7 @@ img{
 	margin-left: 16px;
 }
 
-
-.text{
+.text {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -119,7 +121,7 @@ img{
 	margin-top: 11px;
 }
 
-.pic{
+.pic {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -133,10 +135,9 @@ img{
 	/*border: 1px solid red;*/
 	margin-left: 12px;
 	margin-top: 11px;
-	
 }
 
-.delDown{
+.delDown {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -152,7 +153,7 @@ img{
 	margin-left: 16px;
 }
 
-.link{
+.link {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -168,7 +169,7 @@ img{
 	margin-top: 7px;
 }
 
-.video{
+.video {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -182,10 +183,9 @@ img{
 	/*border: 1px solid red;*/
 	margin-left: 12px;
 	margin-top: 7px;
-	
 }
 
-.del{
+.del {
 	width: 91px;
 	/*width: 33%;*/
 	height: 40px;
@@ -201,7 +201,7 @@ img{
 	margin-left: 16px;
 }
 
-.cancelBtn{
+.cancelBtn {
 	position: relative;
 	width: 34px;
 	margin: 15px auto 0;
@@ -209,7 +209,7 @@ img{
 	/*border: 1px solid red;*/
 }
 
-.inputDiv{
+.inputDiv {
 	position: absolute;
 	width: 356px;
 	left: 0;
@@ -222,7 +222,57 @@ img{
 	padding-left: 6px;
 }
 
-.inputCtx{
+.inputDivnew {
+	position: fixed;
+	width: 375px;
+	top: 0;
+	left: 0;
+	margin: 0 auto;
+	height: 100%;
+	/*background: url(../images/inputBg.png) no-repeat;
+	background-size: 100%;*/
+	background-color: #283e53;
+	z-index: 5;
+	text-align: center;
+	padding-left: 6px;
+	padding-top: 10px;
+}
+
+.inputCtxnew {
+	width: 340px;
+	height: 124px;
+	/*background-color: #edecec;*/
+	background-color: white;
+	margin: 0 auto;
+}
+
+.musicKu {
+	width: 340px;
+	height: 300px;
+	overflow: scroll;
+	/*background-color: #edecec;*/
+	/*border:1px solid white;*/
+	margin: 20px auto 0;
+}
+
+.musicItem {
+	height: 40px;
+	line-height: 40px;
+	background-color: white;
+	text-align: center;
+	color: black;
+	margin-top: 5px;
+	font-size: 15px;
+}
+
+.musicItemStyle {
+	text-align: left;
+	font-size: 15px;
+	padding-bottom: 5px;
+	color: white;
+}
+
+.inputCtx {
 	width: 340px;
 	height: 124px;
 	/*background-color: #edecec;*/
@@ -230,11 +280,11 @@ img{
 	/*margin: 0 auto;*/
 }
 
-textarea{
+textarea {
 	background-color: transparent;
 }
 
-#inputArea{
+#inputArea {
 	font-size: 15px;
 	padding-left: 12px;
 	padding-right: 12px;
@@ -247,11 +297,11 @@ textarea{
 	/*border: 1px solid red;*/
 }
 
-label{
+label {
 	display: inline-block;
 }
 
-#ok8stxt{
+#ok8stxt {
 	font-size: 15px;
 	padding-left: 12px;
 	padding-right: 12px;
@@ -264,22 +314,22 @@ label{
 	/*border: 1px solid red;*/
 }
 
-.zanwei{
+.zanwei {
 	/*border: 1px solid red;*/
 	width: 340px;
 	height: 12px;
 }
 
-::-webkit-input-placeholder{
+::-webkit-input-placeholder {
 	font-size: 15px;
 	color: #7b7b7b;
 }
 
-.add{
+.add {
 	margin-left: 68px;
 }
 
-.addTxtInput{
+.addTxtInput {
 	position: absolute;
 	width: 356px;
 	left: 0;
@@ -292,49 +342,49 @@ label{
 	/*border: 1px solid red;*/
 }
 
-.txtLeft{
+.txtLeft {
 	/*margin-right: 30px;*/
 	margin-top: 10px;
 }
 
-.txtmiddleColor{
+.txtmiddleColor {
 	margin-top: 10px;
 }
 
-.fontSizeType{
+.fontSizeType {
 	margin-top: 8px;
 }
 
-#txtSize{
+#txtSize {
 	font-size: 18px;
 	color: white;
 }
 
-.txtSize{
+.txtSize {
 	font-size: 18px;
 	color: white;
 }
 
-.fontSizeType{
+.fontSizeType {
 	text-align: center;
 }
 
-.txtBig{
-	width:31px;
+.txtBig {
+	width: 31px;
 }
 
-.txtMiddle{
-	width:31px;
+.txtMiddle {
+	width: 31px;
 	margin-left: 8px;
 }
 
-.txtSmall{
-	width:31px;
+.txtSmall {
+	width: 31px;
 	margin-left: 8px;
 }
 
-#txtmiddleColor{
-	width:31px;
+#txtmiddleColor {
+	width: 31px;
 	height: 31px;
 	border: 2px solid #5f7283;
 	background-color: black;
@@ -342,47 +392,47 @@ label{
 	color: transparent;
 }
 
-.minicolors-swatch{
+.minicolors-swatch {
 	display: none;
 }
 
-
-.minicolors-slider{
+.minicolors-slider {
 	display: none;
 }
+
 
 /*.minicolors-grid{
 	background-size: 90%;
 }*/
 
-.minicolors-panel{
+.minicolors-panel {
 	width: 152px;
 	left: 102px !important;
 	background-color: transparent;
 	border: none;
 }
 
-#textColor{
+#textColor {
 	/*position: relative;*/
-	margin-left:30px ;
-	margin-right:30px ;
+	margin-left: 30px;
+	margin-right: 30px;
 	margin-top: 10px;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.textColor{
-	margin-left:30px ;
-	margin-right:30px ;
+.textColor {
+	margin-left: 30px;
+	margin-right: 30px;
 	margin-top: 10px;
 }
 
-.txtAlign{
+.txtAlign {
 	margin-top: 10px;
 	/*margin-left: 20px;*/
 }
 
-.complete{
+.complete {
 	position: fixed;
 	bottom: 0;
 	width: 375px;
@@ -391,9 +441,10 @@ label{
 	background-color: #383f48;
 	z-index: 2;
 	text-align: center;
+	display: none;
 }
 
-.comLeft{
+.comLeft {
 	width: 150px;
 	height: 52px;
 	font-size: 18px;
@@ -403,14 +454,13 @@ label{
 	/*border: 1px solid red;*/
 }
 
-
-.comMiddle{
+.comMiddle {
 	border-right: 1px solid #767a80;
 	height: 24px;
 	margin: 0 10px;
 }
 
-.comRight{
+.comRight {
 	width: 150px;
 	height: 52px;
 	line-height: 52px;
@@ -420,22 +470,22 @@ label{
 	/*border: 1px solid red;*/
 }
 
-#backIcon{
+#backIcon {
 	width: 25px;
 	display: inline-block;
 	vertical-align: middle;
 }
 
-#backTxt{
+#backTxt {
 	display: inline-block;
 	vertical-align: middle;
 }
 
-.form-group{
+.form-group {
 	height: 1000px;
 }
 
-#videoInput{
+#videoInput {
 	font-size: 15px;
 	padding-left: 12px;
 	padding-right: 12px;
@@ -448,8 +498,7 @@ label{
 	/*border: 1px solid red;*/
 }
 
-
-.videoTip{
+.videoTip {
 	font-size: 14px;
 	color: #292e43;
 	text-decoration: underline;
@@ -458,8 +507,30 @@ label{
 	padding-right: 8px;
 }
 
-
-.adsImg img{
+.adsImg img {
 	width: 100%;
 }
 
+.musicDiv {
+	position: absolute;
+	top: -5px;
+	right: -10px;
+	padding: 10px;
+	/*z-index: 2;*/
+}
+
+.rotate {
+	-webkit-animation: rotating 1.2s linear infinite;
+	-moz-animation: rotating 1.2s linear infinite;
+	-o-animation: rotating 1.2s linear infinite;
+	animation: rotating 1.2s linear infinite;
+}
+
+@-webkit-keyframes rotating {
+	from {
+		-webkit-transform: rotate(0deg);
+	}
+	to {
+		-webkit-transform: rotate(360deg);
+	}
+}
